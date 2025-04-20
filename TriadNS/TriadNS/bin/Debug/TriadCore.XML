@@ -1,0 +1,3407 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TriadCore</name>
+    </assembly>
+    <members>
+        <member name="T:TriadCore.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:TriadCore.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:TriadCore.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="T:TriadCore.IProcedure">
+            <summary>
+            ���������� �������������� ���������
+            </summary>
+        </member>
+        <member name="F:TriadCore.IProcedure.spyObjectList">
+            <summary>
+            ������ ������������������ � �� �������� ��������
+            </summary>
+        </member>
+        <member name="M:TriadCore.IProcedure.DoInitialize">
+            <summary>
+            ������� �������������
+            </summary>
+        </member>
+        <member name="M:TriadCore.IProcedure.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            �������� ��������� ���������(�� ���������� � ������������ ���  
+            ����������� �����������, �� ����� ��������� ��������� ��)
+            </summary>
+            <param name="objectInfo">������ ��������, �� ��������� �������� ���������</param>
+            <param name="systemTime">��������� ����� �� �������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.PrintMessage(System.Object)">
+            <summary>
+            ���������� ������
+            </summary>
+            <param name="message">���������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.RegisterSpyObject(TriadCore.SpyObject,TriadCore.CoreName)">
+            <summary>
+            ���������������� ������ ��������
+            </summary>
+            <param name="objectInfo">������ ��������</param>
+            <param name="formalName">���������� ��� �������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.RegisterSpyObject(TriadCore.SpyObject[],TriadCore.CoreNameRange)">
+            <summary>
+            ���������������� �������� �������� ��������
+            </summary>
+            <param name="objectInfoArray">������ �������� ��������</param>
+            <param name="formalNameRange">�������� ����</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.GetSpyObject(TriadCore.CoreName)">
+            <summary>
+            �������� ������ ��������
+            </summary>
+            <param name="objectName">��� �������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.IProcedure.GetSpyObject(TriadCore.CoreNameRange)">
+            <summary>
+            �������� �������� �������� ��������
+            </summary>
+            <param name="objectNameRange">��� ���������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.IProcedure.GetSpyVarValue(TriadCore.CoreName)">
+            <summary>
+            �������� �������� spy-���������� (������� ��� in/passive)
+            </summary>
+            <param name="varName">��� ����������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.SetSpyVarValue(TriadCore.CoreName,System.Object)">
+            <summary>
+            ������ �������� spy-����������
+            </summary>
+            <param name="varName">��� ����������</param>
+            <param name="value">��������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.BlockPolus(TriadCore.CoreName)">
+            <summary>
+            ������������� �����
+            </summary>
+            <param name="polusName">��� ������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.BlockPolus(TriadCore.CoreNameRange)">
+            <summary>
+            ������������� �������� �������
+            </summary>
+            <param name="polusNameRange">��������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.UnblockPolus(TriadCore.CoreName)">
+            <summary>
+            �������������� �����
+            </summary>
+            <param name="polusName">��� ������</param>
+        </member>
+        <member name="M:TriadCore.IProcedure.UnblockPolus(TriadCore.CoreNameRange)">
+            <summary>
+            �������������� �������� �������
+            </summary>
+            <param name="polusNameRange">��������</param>
+        </member>
+        <member name="T:TriadCore.SpyEvent">
+            <summary>
+            ����������, ����������� ��� �������� �� ���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyEvent.#ctor(TriadCore.CoreName,TriadCore.ReflectionObject)">
+            <summary>
+            �����������
+            </summary>
+            <param name="realName">��������� ��� �������</param>
+            <param name="objectContainer">������-���������</param>
+        </member>
+        <member name="M:TriadCore.SpyEvent.Equals(TriadCore.SpyObject)">
+            <summary>
+            �������� ���������
+            </summary>
+            <param name="other"></param>
+            <returns>True, ���� ������� ���������</returns>
+        </member>
+        <member name="T:TriadCore.SpyObject">
+            <summary>
+            ������ ��������
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyObject.#ctor(TriadCore.CoreName,TriadCore.ReflectionObject)">
+            <summary>
+            �����������
+            </summary>
+            <param name="realName">��� ����������, ������ ��� ������� � �������</param>
+            <param name="objectContainer">������-���������</param>
+        </member>
+        <member name="M:TriadCore.SpyObject.Equals(TriadCore.SpyObject)">
+            <summary>
+            ������� ���������
+            </summary>
+            <param name="other">������������ ������ ��������</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.SpyObject.Equals(TriadCore.SpyObject[])">
+            <summary>
+            ������� ���������
+            </summary>
+            <param name="otherArray">������ ��������</param>
+            <returns>True, ���� �������� ���� �� � ����� ��������� �������</returns>
+        </member>
+        <member name="M:TriadCore.SpyObject.ToString">
+            <summary>
+            ��������� �������������
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TriadCore.SpyObject.RealName">
+            <summary>
+            ��������� ��� �������
+            </summary>
+        </member>
+        <member name="P:TriadCore.SpyObject.Data">
+            <summary>
+            �������������� ����������
+            </summary>
+        </member>
+        <member name="P:TriadCore.SpyObject.Container">
+            <summary>
+            ������-���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyObject.Clone">
+            <summary>
+            ������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:TriadCore.SpyObject.objectContainer">
+            <summary>
+            ������-���������
+            </summary>
+        </member>
+        <member name="F:TriadCore.SpyObject.realName">
+            <summary>
+            ��� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.SpyObject.data">
+            <summary>
+            �������������� ���������� (��������, ��������� ��������� � ������)
+            </summary>
+        </member>
+        <member name="T:TriadCore.SpyObjectType">
+            <summary>
+            ��� ������� ��������
+            </summary>
+        </member>
+        <member name="F:TriadCore.SpyObjectType.Var">
+            <summary>
+            ����������
+            </summary>
+        </member>
+        <member name="F:TriadCore.SpyObjectType.Polus">
+            <summary>
+            �����
+            </summary>
+        </member>
+        <member name="F:TriadCore.SpyObjectType.Event">
+            <summary>
+            �������
+            </summary>
+        </member>
+        <member name="T:TriadCore.SpyPolus">
+            <summary>
+            ���������� ��� �������� �� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyPolus.#ctor(TriadCore.CoreName,TriadCore.ReflectionObject)">
+            <summary>
+            �����������
+            </summary>
+            <param name="realName">��������� ��� ������</param>
+            <param name="objectContainer">������-��������� (����������� ������)</param>
+        </member>
+        <member name="M:TriadCore.SpyPolus.Equals(TriadCore.SpyObject)">
+            <summary>
+            �������� ���������
+            </summary>
+            <param name="other"></param>
+            <returns>True, ���� ������� ���������</returns>
+        </member>
+        <member name="P:TriadCore.SpyPolus.BaseRoutine">
+            <summary>
+            ������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyPolus.BlockPolus">
+            <summary>
+            ����������� �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyPolus.UnblockPolus">
+            <summary>
+            �������������� �����
+            </summary>
+        </member>
+        <member name="T:TriadCore.SpyVar">
+            <summary>
+            ���������� ��� �������� �� ����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyVar.#ctor(TriadCore.CoreName,TriadCore.ReflectionObject)">
+            <summary>
+            �����������
+            </summary>
+            <param name="realName">��� ���������� � �������</param>
+            <param name="varContainer">������, ���������� ����������</param>
+        </member>
+        <member name="M:TriadCore.SpyVar.Equals(TriadCore.SpyObject)">
+            <summary>
+            �������� ���������
+            </summary>
+            <param name="other"></param>
+            <returns>True, ���� ������� ���������</returns>
+        </member>
+        <member name="P:TriadCore.SpyVar.Value">
+            <summary>
+            �������� ����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpyVar.Clone">
+            <summary>
+            ������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:TriadCore.SpyVar.varContainer">
+            <summary>
+            ������, ���������� ����������
+            </summary>
+        </member>
+        <member name="T:TriadCore.IPCount">
+            <summary>
+            Информационная функция нахождения числа срабатываний SPY-объектов
+            </summary>
+        </member>
+        <member name="F:TriadCore.IPCount.counter">
+            <summary>
+            счетчик 
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPCount.RegisterSpyObjects(TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="Arg"></param>
+        </member>
+        <member name="M:TriadCore.IPCount.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="M:TriadCore.IPCount.DoInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPCount.DoProcessing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.IPDispersion">
+            <summary>
+            Информационная функция нахождения дисперсии аргумента
+            </summary>
+        </member>
+        <member name="F:TriadCore.IPDispersion.POW">
+            <summary>
+            степень
+            </summary>
+        </member>
+        <member name="F:TriadCore.IPDispersion.summa_square">
+            <summary>
+            сумма квадратов аргументов
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPDispersion.DoInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPDispersion.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="M:TriadCore.IPDispersion.DoProcessing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.IPIntervalEvent">
+            <summary>
+            Информационная функция нахождения промежутка времени между срабатываниями событий
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPIntervalEvent.RegisterSpyObjects(TriadCore.SpyObject,TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="E1"></param>
+            <param name="E2"></param>
+        </member>
+        <member name="M:TriadCore.IPIntervalEvent.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="T:TriadCore.IPIntervalChange">
+            <summary>
+            Информационная функция нахождения промежутка времени между изменениями значений переменной
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPIntervalChange.RegisterSpyObjects(TriadCore.SpyObject,TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="var1"></param>
+            <param name="var2"></param>
+        </member>
+        <member name="M:TriadCore.IPIntervalChange.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="T:TriadCore.IPIntervalPolus">
+            <summary>
+            Информационная функция нахождения промежутка времени между поступлениями сигналов на полюса
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPIntervalPolus.RegisterSpyObjects(TriadCore.SpyObject,TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="P1"></param>
+            <param name="P2"></param>
+        </member>
+        <member name="M:TriadCore.IPIntervalPolus.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="T:TriadCore.Interval">
+            <summary>
+            Информационная функция - предок
+            </summary>
+        </member>
+        <member name="F:TriadCore.Interval.time_1">
+            <summary>
+            время срабатывания ИП на первый объект слежения 
+            </summary>
+        </member>
+        <member name="F:TriadCore.Interval.time_2">
+            <summary>
+            время срабатывания ИП на второй объект слежения 
+            </summary>
+        </member>
+        <member name="M:TriadCore.Interval.DoInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.Interval.DoProcessing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.IPMax">
+            <summary>
+            �������������� ������� ���������� ������������� �������� ���������
+            </summary>
+        </member>
+        <member name="F:TriadCore.IPMax.max">
+            <summary>
+            ������������ �������� ���������
+            </summary>
+        </member>
+        <member name="P:TriadCore.IPMax.Arg">
+            <summary>
+            �������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPMax.RegisterSpyObjects(TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+        </member>
+        <member name="M:TriadCore.IPMax.DoInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPMax.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="M:TriadCore.IPMax.DoProcessing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.IPMean">
+            <summary>
+            Информационная функция нахождения среднего арифметического всех значений аргумента
+            </summary>
+        </member>
+        <member name="F:TriadCore.IPMean.summa">
+            <summary>
+            сумма аргументов
+            </summary>
+        </member>
+        <member name="F:TriadCore.IPMean.count">
+            <summary>
+            количество аргументов
+            </summary>
+        </member>
+        <member name="P:TriadCore.IPMean.Arg">
+            <summary>
+            аргумент функции
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPMean.RegisterSpyObjects(TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+        </member>
+        <member name="M:TriadCore.IPMean.DoInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPMean.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="M:TriadCore.IPMean.DoProcessing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.IPMin">
+            <summary>
+            �������������� ������� ���������� ������������ �������� ���������
+            </summary>
+        </member>
+        <member name="F:TriadCore.IPMin.min">
+            <summary>
+            ����������� �������� ���������
+            </summary>
+        </member>
+        <member name="P:TriadCore.IPMin.Arg">
+            <summary>
+            �������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPMin.RegisterSpyObjects(TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+        </member>
+        <member name="M:TriadCore.IPMin.DoInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPMin.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="M:TriadCore.IPMin.DoProcessing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.IPTimeEvent">
+            <summary>
+            Информационная функция нахождения времени срабатывания события
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPTimeEvent.RegisterSpyObjects(TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="E"></param>
+        </member>
+        <member name="T:TriadCore.IPTimeChange">
+            <summary>
+            Информационная функция нахождения времени изменения значения переменной
+            </summary>
+        </member>
+        <member name="P:TriadCore.IPTimeChange.Arg">
+            <summary>
+            аргумент функции
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPTimeChange.RegisterSpyObjects(TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="arg"></param>
+        </member>
+        <member name="T:TriadCore.IPTimePolus">
+            <summary>
+            Информационная функция нахождения времени поступления сигнала на полюс
+            </summary>
+        </member>
+        <member name="M:TriadCore.IPTimePolus.RegisterSpyObjects(TriadCore.SpyObject)">
+            <summary>
+            
+            </summary>
+            <param name="P"></param>
+        </member>
+        <member name="T:TriadCore.Time">
+            <summary>
+            Информационная функция - предок
+            </summary>
+        </member>
+        <member name="F:TriadCore.Time.time">
+            <summary>
+            время
+            </summary>
+        </member>
+        <member name="M:TriadCore.Time.DoInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.Time.DoHandling(TriadCore.SpyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="objectInfo"></param>
+            <param name="systemTime"></param>
+        </member>
+        <member name="M:TriadCore.Time.DoProcessing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.ArrayInitializer">
+            <summary>
+            ������������� ��������
+            </summary>
+        </member>
+        <member name="M:TriadCore.ArrayInitializer.Initialize(System.Object,TriadCore.ICreatable)">
+            <summary>
+            �������������������
+            </summary>
+            <param name="array">���������������� ������</param>
+            <param name="objectToClone">������, ������� �������� ������������ �������������</param>
+        </member>
+        <member name="T:TriadCore.CoreName">
+            <summary>
+            ��� ��� ������������� ��������� ����
+            </summary>
+        </member>
+        <member name="M:TriadCore.CoreName.#ctor(System.String,System.Int32[])">
+            <summary>
+            �����������
+            </summary>
+            <param polusName="BaseName">��� �������</param>
+            <param polusName="Index">������ � �������</param>
+        </member>
+        <member name="P:TriadCore.CoreName.IsIndexed">
+            <summary>
+            �������� �� �������������� ���
+            </summary>
+        </member>
+        <member name="P:TriadCore.CoreName.BaseName">
+            <summary>
+            ������� ���
+            </summary>
+        </member>
+        <member name="P:TriadCore.CoreName.Indices">
+            <summary>
+            �������
+            </summary>
+        </member>
+        <member name="P:TriadCore.CoreName.IndexArray">
+            <summary>
+            ������ ��������
+            </summary>
+        </member>
+        <member name="M:TriadCore.CoreName.ToString">
+            <summary>
+            ���������� ������������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.CoreName.Equals(System.Object)">
+            <summary>
+            ��������� ����
+            </summary>
+            <param name="obj">������ ���</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.CoreName.Equals(TriadCore.CoreNameRange)">
+            <summary>
+            ��������� � ���������� ����
+            </summary>
+            <param name="coreNameRange">�������� ����</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.CoreName.CompareTo(System.Object)">
+            <summary>
+            �������� ���������
+            ��� ������� ������������ ��� �������� CoreName � SortedList
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.CoreName.GetHashCode">
+            <summary>
+            ���
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:TriadCore.CoreName.baseName">
+            <summary>
+            ������� ���
+            </summary>
+        </member>
+        <member name="F:TriadCore.CoreName.indexList">
+            <summary>
+            �������
+            </summary>
+        </member>
+        <member name="T:TriadCore.CoreNameDictionary`2">
+            <summary>
+            ����������� �������
+            </summary>
+            <typeparam name="TKey">����</typeparam>
+            <typeparam name="TValue">��������</typeparam>
+        </member>
+        <member name="M:TriadCore.CoreNameDictionary`2.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="P:TriadCore.CoreNameDictionary`2.Item(System.Int32)">
+            <summary>
+            �������� �������� �� �������
+            </summary>
+            <param name="index">������</param>
+            <returns>������� ��������</returns>
+        </member>
+        <member name="T:TriadCore.CoreNameRange">
+            <summary>
+            �������� ���� ��������� ����
+            </summary>
+        </member>
+        <member name="M:TriadCore.CoreNameRange.#ctor(System.String,System.Int32[])">
+            <summary>
+            �����������
+            </summary>
+            <param name="arrayName">��� ������� ����</param>
+            <param name="firstLastIndexList">������ � ������� ������� ��������</param>
+        </member>
+        <member name="M:TriadCore.CoreNameRange.IncrementIndex(System.Collections.Generic.List{System.Int32},System.Int32,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            ��������� ������� ������
+            </summary>
+            <param name="currIndex">������� ������</param>
+            <param name="currIndexNumber">����� ����������� �������</param>
+            <param name="lowIndex">������ ������</param>
+            <param name="highIndex">������� ������</param>
+            <returns>True, ���� ������ ������� �������</returns>
+        </member>
+        <member name="M:TriadCore.CoreNameRange.GetEnumerator">
+            <summary>
+            �������� ������������� ���� �� ���������
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TriadCore.CoreNameRange.ItemCount">
+            <summary>
+            ����� ���� � ���������
+            </summary>
+        </member>
+        <member name="P:TriadCore.CoreNameRange.Item(System.Int32)">
+            <summary>
+            ��������� ����� ��������� �� �������
+            </summary>
+            <param name="index">������</param>
+            <returns>���</returns>
+        </member>
+        <member name="F:TriadCore.CoreNameRange.coreNameList">
+            <summary>
+            ����� ��������� ���������� � ��������
+            </summary>
+        </member>
+        <member name="T:TriadCore.ICreatable">
+            <summary>
+            ��������� �������� ������ �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.ICreatable.CreateNew">
+            <summary>
+            ������� ����� ������
+            </summary>
+            <returns>����� ������</returns>
+        </member>
+        <member name="T:TriadCore.LoggerRecord">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TriadCore.LoggerRecord.SystemTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TriadCore.LoggerRecord.ObjectName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TriadCore.LoggerRecord.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.LoggerRecord.#ctor(System.Double,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="systemTime"></param>
+            <param name="objectName"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:TriadCore.LoggerRecord.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TriadCore.Logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TriadCore.Logger.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TriadCore.Logger.Records">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.Logger.AddRecord(TriadCore.LoggerRecord)">
+            <summary>
+            
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:TriadCore.Logger.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TriadCore.Logger.XML">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.Logger.SaveToXml">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TriadCore.Logger.LoadFromXml">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TriadCore.ReflectionObject">
+            <summary>
+            ������� �����, �������������� ������ � ����������� ��������� ����� ������
+            </summary>
+        </member>
+        <member name="F:TriadCore.ReflectionObject.spyHandlerList">
+            <summary>
+            ����������� ��������� ��������
+            </summary>
+        </member>
+        <member name="M:TriadCore.ReflectionObject.Clone">
+            <summary>
+            �������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.ReflectionObject.RegisterSpyHandler(TriadCore.SpyObject,TriadCore.SpyHandler)">
+            <summary>
+            ���������������� ���������� ��������� �������
+            </summary>
+            <param name="objectInfo">������ ��������</param>
+            <param name="handler">����������</param>
+        </member>
+        <member name="M:TriadCore.ReflectionObject.RegisterSpyHandler(TriadCore.SpyObject[],TriadCore.SpyHandler)">
+            <summary>
+            ���������������� ���������� ��������� ��������� ��������
+            </summary>
+            <param name="objectInfoArray">��������</param>
+            <param name="handler">����������</param>
+        </member>
+        <member name="M:TriadCore.ReflectionObject.RemoveAllVarChangeHandlers">
+            <summary>
+            ������� ��� ����������� ��������� ����������
+            </summary>
+        </member>
+        <member name="P:TriadCore.ReflectionObject.SystemTime">
+            <summary>
+            ��������� �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.ReflectionObject.GetValueForVar(TriadCore.CoreName)">
+            <summary>
+            �������� �������� ���������� ����������
+            </summary>
+            <param name="varName">��� ����������</param>
+            <returns>�������� ����������</returns>
+        </member>
+        <member name="M:TriadCore.ReflectionObject.SetValueForVar(TriadCore.CoreName,System.Object)">
+            <summary>
+            ���������� �������� ���������� ����������  
+            </summary>
+            <param name="varName">��� ����������</param>
+            <param name="value">�������� ����������</param>
+        </member>
+        <member name="M:TriadCore.ReflectionObject.DoVarChanging(TriadCore.CoreName)">
+            <summary>
+            ����� ������������ ��������� ����������
+            </summary>
+            <param name="varName">��� ����������</param>
+        </member>
+        <member name="T:TriadCore.Set">
+            <summary>
+            Множество
+            </summary>
+        </member>
+        <member name="F:TriadCore.Set.valueList">
+            <summary>
+            Список элементов множества
+            </summary>
+        </member>
+        <member name="M:TriadCore.Set.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:TriadCore.Set.#ctor(TriadCore.Set)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="anotherSet">Инициирующее мн-во</param>
+        </member>
+        <member name="M:TriadCore.Set.#ctor(System.Object[])">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="valueList">Элементы множества</param>
+        </member>
+        <member name="M:TriadCore.Set.GetEnumerator">
+            <summary>
+            Получить перечислитель всех элементов множества
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Set.In(System.Object)">
+            <summary>
+            Проверить, есть ли указанный элемент в текущем множестве
+            </summary>
+            <param name="value">Указанный элемент</param>
+            <returns>True, если элемент есть в множестве</returns>
+        </member>
+        <member name="M:TriadCore.Set.AddValue(System.Object)">
+            <summary>
+            Добавить элемент в множество
+            </summary>
+            <param name="value">Элемент</param>
+            <returns>Изменившееся множество</returns>
+        </member>
+        <member name="M:TriadCore.Set.Unite(TriadCore.Set)">
+            <summary>
+            Объединить текущее множество с переданным
+            </summary>
+            <param name="anotherSet">Переданное множество</param>
+            <returns>Объединенное множество</returns>
+        </member>
+        <member name="M:TriadCore.Set.RemoveValue(System.Object)">
+            <summary>
+            Удалить элемент из множества
+            </summary>
+            <param name="value">Удаляемый элемент</param>
+        </member>
+        <member name="M:TriadCore.Set.Subtract(TriadCore.Set)">
+            <summary>
+            Вычесть из текущего множества указанное
+            </summary>
+            <param name="anotherSet">Множество, которое вычитается</param>
+            <returns>Итоговое множество</returns>
+        </member>
+        <member name="M:TriadCore.Set.Intersect(TriadCore.Set)">
+            <summary>
+            Пересечь текущее множество с указанным
+            </summary>
+            <param name="anotherSet">Указанное множество</param>
+            <returns>Итоговое множество</returns>
+        </member>
+        <member name="P:TriadCore.Set.Size">
+            <summary>
+            Размер множества
+            </summary>
+            <returns>Число элементов множества</returns>
+        </member>
+        <member name="M:TriadCore.Set.Equal(TriadCore.Set)">
+            <summary>
+            Проверить, совпадают ли текущее и указанное множества
+            </summary>
+            <param name="anotherSet">Указанное множество</param>
+            <returns>True, если множества совпадают</returns>
+        </member>
+        <member name="M:TriadCore.Set.NotEqual(TriadCore.Set)">
+            <summary>
+            Проверить, что текущее множество НЕ совпадает с указанным
+            </summary>
+            <param name="anotherSet">Указанное множество</param>
+            <returns>True, если множества НЕ совпадают</returns>
+        </member>
+        <member name="M:TriadCore.Set.IsSubsetOf(TriadCore.Set)">
+            <summary>
+            Проверить, что текущее множество является подмножеством указанного
+            </summary>
+            <param name="anotherSet">Указанное множество</param>
+            <returns>True, если текущее множество является подмножеством указанного</returns>
+        </member>
+        <member name="M:TriadCore.Set.IsSupersetOf(TriadCore.Set)">
+            <summary>
+            Проверить, что текущее множество является надмножеством указанного
+            </summary>
+            <param name="anotherSet">Указанное множество</param>
+            <returns>True, если текущее множество является надмножеством указанного</returns>
+        </member>
+        <member name="M:TriadCore.Set.op_Addition(TriadCore.Set,TriadCore.Set)">
+            <summary>
+            Операция объединения множеств
+            </summary>
+            <param name="set1"></param>
+            <param name="set2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Set.op_Subtraction(TriadCore.Set,TriadCore.Set)">
+            <summary>
+            Операция вычитания множеств
+            </summary>
+            <param name="set1"></param>
+            <param name="set2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Set.op_Multiply(TriadCore.Set,TriadCore.Set)">
+            <summary>
+            Операция пересечения множеств
+            </summary>
+            <param name="set1"></param>
+            <param name="set2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Set.op_GreaterThanOrEqual(TriadCore.Set,TriadCore.Set)">
+            <summary>
+            Проверка, что первое множество является надмножеством второго
+            </summary>
+            <param name="set1"></param>
+            <param name="set2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Set.op_LessThanOrEqual(TriadCore.Set,TriadCore.Set)">
+            <summary>
+            Проверка, что первое множество является подмножеством второго
+            </summary>
+            <param name="set1"></param>
+            <param name="set2"></param>
+            <returns></returns>
+        </member>
+        <member name="F:TriadCore.Arc.nodefrom">
+            <summary>
+            начальная вершина
+            </summary>
+        </member>
+        <member name="F:TriadCore.Arc.nodeto">
+            <summary>
+            конечная вершина
+            </summary>
+        </member>
+        <member name="F:TriadCore.Arc.inf">
+            <summary>
+            информационное поле
+            </summary>
+        </member>
+        <member name="T:TriadCore.StandartFunctions">
+            <summary>
+            стандартные функции слоя структур
+            </summary>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetGraphWithoutRoutines(TriadCore.Graph)">
+            <summary>
+            выделяет слой структуры в модели М
+            </summary>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetRoutines(TriadCore.Graph)">
+            <summary>
+            выделяет слой рутин в модели М|выделяет элементарную рутину наложенную на вершину модели
+            </summary>
+            <param name="M">Модель</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetRoutine(TriadCore.Node)">
+            <param name="node">вершина модели</param>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodes(TriadCore.Graph,TriadCore.Set)">
+            <summary>
+            
+            </summary>
+            <param name="G"></param>
+            <param name="RoutineNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodeSet(TriadCore.Graph)">
+            <summary>
+            находит множество вершин графа
+            </summary>
+            <param name="G">граф</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetAdjacentNodesOut(TriadCore.Node)">
+            <summary>
+            множество смежных по выходу вершин
+            </summary>
+            <param name="N">вершина</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetIncidentEdges(TriadCore.Node)">
+            <summary>
+            множество инцидентных ребер
+            </summary>
+            <param name="N"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetAdjacentNodesIn(TriadCore.Node)">
+            <summary>
+            множество смежных по входу вершин
+            </summary>
+            <param name="N">вершина</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetAdjacentNodes(TriadCore.Node)">
+            <summary>
+            множество смежных вершин
+            </summary>
+            <param name="N">вешина</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodeNames(TriadCore.Graph)">
+            <summary>
+            множество имен вершин графа
+            </summary>
+            <param name="G">граф</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetArrayOfNodeNames(TriadCore.Graph)">
+            <summary>
+            массив имен вершин графа
+            </summary>
+            <param name="G">граф</param>
+            <returns>массив</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodeCount(TriadCore.Graph)">
+            <summary>
+            число вершин в графе
+            </summary>
+            <param name="G">граф</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodeDegree(TriadCore.Node)">
+            <summary>
+            степень вершины
+            </summary>
+            <param name="node">вершина</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodeDegreeIn(TriadCore.Node)">
+            <summary>
+            степень вершины по входам
+            </summary>
+            <param name="node">вершина</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodeDegreeOut(TriadCore.Node)">
+            <summary>
+            степень вершины по выходам
+            </summary>
+            <param name="node">вершина</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetMatrix(TriadCore.Graph)">
+            <summary>
+            получить матрицу смежности графа
+            </summary>
+            <param name="G">граф</param>
+            <returns>матрица смежности</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetGraphDiameter(TriadCore.Graph)">
+            <summary>
+            находит диаметр графа
+            </summary>
+            <param name="G">граф</param>
+            <returns>диаметр</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetNodeIndex(TriadCore.Graph,TriadCore.Node)">
+            <summary>
+            индекс вершины в графе
+            </summary>
+            <param name="G">граф</param>
+            <param name="node">вершина</param>
+            <returns>индекс,-1 если вершины нет в графе</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.FindShortestPath(TriadCore.Graph,TriadCore.Node,TriadCore.Node)">
+            <summary>
+            поиск кратчайшего пути между 2 вершинами
+            </summary>
+            <param name="G">граф</param>
+            <param name="nodefrom">начальная вершина</param>
+            <param name="nodeto">конечная вершина</param>
+            <returns>список вершин, в порядке образования пути</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.MinSpanningTree(TriadCore.Graph,System.Collections.Generic.List{TriadCore.Edge})">
+            <summary>
+            минимимальное остовное дерево (Алг. Прима)
+            </summary>
+            <param name="G">неориентированный граф</param>
+            <param name="l">список ребер графа с весами</param>
+            <returns>список ребер миним остовного дерева</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.MaxSpanningTree(TriadCore.Graph,System.Collections.Generic.List{TriadCore.Edge})">
+            <summary>
+            максимимальное остовное дерево (Алг. Прима)
+            </summary>
+            <param name="G">неориентированный граф</param>
+            <param name="l">список ребер графа с весами</param>
+            <returns>список ребер макс остовного дерева</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.MaxFlowValue(TriadCore.Graph,TriadCore.Node,TriadCore.Node,System.Collections.Generic.List{TriadCore.Arc})">
+            <summary>
+            величина максимального потока
+            </summary>
+            <param name="G">граф</param>
+            <param name="s">источник</param>
+            <param name="t">сток</param>
+            <param name="l">список дуг с пропускными способностями</param>
+            <returns>величина поток</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.MaxFlow(TriadCore.Graph,TriadCore.Node,TriadCore.Node,System.Collections.Generic.List{TriadCore.Arc})">
+            <summary>
+            максимальный поток
+            </summary>
+            <param name="G">граф</param>
+            <param name="s">источник</param>
+            <param name="t">сток</param>
+            <param name="l">список дуг с пропускными способностями</param>
+            <returns>список дуг потока</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.MaxMatching(TriadCore.Graph,System.Int32[],System.Int32[])">
+            <summary>
+            поиск максимального паросочетания
+            </summary>
+            <param name="G">двудольный граф</param>
+            <param name="u">индексы веришн 1 доли</param>
+            <param name="v">индексы вершин 2 доли</param>
+            <returns>список веришин в порядке образования ребер макс паросоч</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.GetStronglyConnectedComponents(TriadCore.Graph)">
+            <summary>
+            сильно связные компоненты графа
+            </summary>
+            <param name="G">граф</param>
+            <returns>массив,i значение-номер компоненты которой принадл i вершина</returns>
+        </member>
+        <member name="M:TriadCore.StandartFunctions.AssignProblem(TriadCore.Graph,System.Int32[0:,0:])">
+            <summary>
+            задача о назначениях
+            </summary>
+            <param name="G">граф</param>
+            <param name="a">матрица затрат</param>
+            <returns>список ребер минимального назначения</returns>
+        </member>
+        <member name="T:TriadCore.Matching">
+            <summary>
+            Паросочетания
+            </summary>
+        </member>
+        <member name="M:TriadCore.Matching.#ctor(TriadCore.Graph,System.Int32[],System.Int32[])">
+            <summary>
+            поиск максимального паросочетания
+            </summary>
+            <param name="G">граф</param>
+            <param name="u">индексы вершин 1 доли</param>
+            <param name="v">индексы вершин 2 доли</param>
+        </member>
+        <member name="M:TriadCore.Matching.#ctor(TriadCore.Graph,System.Int32[0:,0:])">
+            <summary>
+            решение задачи о назначениях
+            </summary>
+            <param name="a">матрица затрат</param>
+        </member>
+        <member name="M:TriadCore.Matching.AssignmentProblem">
+            <summary>
+            решение задачи о назначениях
+            </summary>
+        </member>
+        <member name="P:TriadCore.Matching.AssignNumber">
+            <summary>
+            возвращает список ребер, максимального назначения
+            </summary>
+        </member>
+        <member name="P:TriadCore.Matching.MinAssignCost">
+            <summary>
+            минимальная суммарная стоимость задачи о назначениях
+            </summary>
+        </member>
+        <member name="M:TriadCore.Matching.FindMaxMatching">
+            <summary>
+            поиск максимального паросочетания
+            </summary>
+        </member>
+        <member name="M:TriadCore.Matching.find(System.Int32)">
+            <summary>
+            алгоритм Куна поиска макс паросочетания
+            </summary>
+            <param name="s">вершина 1 доли</param>
+            <returns>найдена ли увелич цепь</returns>
+        </member>
+        <member name="P:TriadCore.Matching.MaxMatching">
+            <summary>
+            максимальное парасочетние
+            </summary>
+        </member>
+        <member name="P:TriadCore.Matching.CountEdgeInMaxMatching">
+            <summary>
+            кол-во ребер в максимальном паросочетании
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.assign">
+            <summary>
+            список ребер решения задачи о назначении
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.NC">
+            <summary>
+            кол-во вершин в графе
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.k">
+            <summary>
+            кол-во вершин в первой доле
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.n">
+            <summary>
+            кол-во вершин во второй доле
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.u">
+            <summary>
+            массив индексов вершин первой доли
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.v">
+            <summary>
+            массив индексов вершин второй доли
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.maxMatching">
+            <summary>
+            список вершин в порядке образования ребер которые образуют максимально парасочетание
+            </summary>
+        </member>
+        <member name="F:TriadCore.Matching.countEdgeInMaxMatching">
+            <summary>
+            кол-во ребер в максимальном паросочетании
+            </summary>
+        </member>
+        <member name="T:TriadCore.MaxFlow">
+            <summary>
+            максимальный поток
+            </summary>
+        </member>
+        <member name="M:TriadCore.MaxFlow.#ctor(TriadCore.Graph,TriadCore.Node,TriadCore.Node,System.Collections.Generic.List{TriadCore.Arc})">
+            <summary>
+            поиск максимального потока
+            </summary>
+            <param name="G">граф</param>
+            <param name="s">источник</param>
+            <param name="t">сток</param>
+            <param name="t">список дуг с пропускн способностями</param>
+        </member>
+        <member name="P:TriadCore.MaxFlow.GetMaxFlowValue">
+            <summary>
+            величина максимального потока
+            </summary>
+        </member>
+        <member name="P:TriadCore.MaxFlow.GetMaxFlow">
+            <summary>
+            максимальный поток
+            </summary>
+        </member>
+        <member name="P:TriadCore.MaxFlow.FindPath">
+            <summary>
+            есть ли расстояние из источника в сток в остаточной сети(поиск в ширину)
+            </summary>
+        </member>
+        <member name="M:TriadCore.MaxFlow.FindMaxFlow">
+            <summary>
+            Форда - Фалкерсона
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.maxflowvalue">
+            <summary>
+            максимальный поток
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.NC">
+            <summary>
+            кол-во вершин в графe
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.F">
+            <summary>
+            поток
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.c">
+            <summary>
+            пропускные способности
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.snode">
+            <summary>
+            источник
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.tnode">
+            <summary>
+            сток
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.prev">
+            <summary>
+            номер предыдущей вершины
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.d">
+            <summary>
+            кратч расстояние от источника
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.used">
+            <summary>
+            посещалась ли  i вершина
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.infinity">
+            <summary>
+            бесконечность
+            </summary>
+        </member>
+        <member name="F:TriadCore.MaxFlow.maxFlow">
+            <summary>
+            найденный макс поток
+            </summary>
+        </member>
+        <member name="M:TriadCore.Scc.dfs(System.Int32)">
+            <summary>
+            поиск в глубину
+            </summary>
+            <param name="node">вершина</param>
+        </member>
+        <member name="M:TriadCore.Scc.dfsT(System.Int32)">
+            <summary>
+            поиск в глубину для GТ
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="P:TriadCore.Scc.GetScc">
+            <summary>
+            массив где i значение это номер компоненты i вершины
+            </summary>
+        </member>
+        <member name="F:TriadCore.Scc.NC">
+            <summary>
+            кол-во вершин
+            </summary>
+        </member>
+        <member name="F:TriadCore.Scc.edges_c">
+            <summary>
+            кол-во ребер
+            </summary>
+        </member>
+        <member name="F:TriadCore.Scc.edgesT_c">
+            <summary>
+            кол-во ребер
+            </summary>
+        </member>
+        <member name="M:TriadCore.ShortestPath.#ctor(TriadCore.Graph,TriadCore.Node,TriadCore.Node)">
+            <summary>
+            нахождение кратчайшего расстояния между 2 вершинами графа
+            </summary>
+            <param name="G">граф</param>
+            <param name="nodefrom">начальная вершины</param>
+            <param name="nodeto">конечная вершина</param>
+        </member>
+        <member name="M:TriadCore.ShortestPath.Dijkstra">
+            <summary>
+            нахождение кратчайшего расстояние между 2 вершинами графа
+            </summary>
+        </member>
+        <member name="F:TriadCore.ShortestPath.nf">
+            <summary>
+            номер начальной вершины
+            </summary>
+        </member>
+        <member name="F:TriadCore.ShortestPath.nt">
+            <summary>
+            номер конечной вершины
+            </summary>
+        </member>
+        <member name="F:TriadCore.ShortestPath.NC">
+            <summary>
+            кол-во вершин в графе
+            </summary>
+        </member>
+        <member name="F:TriadCore.ShortestPath.l">
+            <summary>
+            кратчайший путь
+            </summary>
+        </member>
+        <member name="F:TriadCore.ShortestPath.pathlenght">
+            <summary>
+            длина пути
+            </summary>
+        </member>
+        <member name="T:TriadCore.SpanningTree">
+            <summary>
+            остовное дерево
+            </summary>
+        </member>
+        <member name="M:TriadCore.SpanningTree.MinSpanningTree">
+            <summary>
+            поиск минимального остовного дерева
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.SpanningTree.MaxSpanningTree">
+            <summary>
+            поиск максимального остовного дерева
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.TestFunction">
+            <summary>
+            класс для тестирования функций
+            </summary>
+        </member>
+        <member name="M:TriadCore.TestFunction.TestScc">
+            <summary>
+            тестирование функции нахождения сильно связных компонент графа
+            </summary>
+        </member>
+        <member name="T:TriadCore.Convertion">
+            <summary>
+            ������� �������������� �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Convertion.StrToInt(System.String)">
+            <summary>
+            �������������� ������ � ����� �����
+            </summary>
+            <param name="value">������</param>
+            <returns>����� �����</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.IntToStr(System.Int32)">
+            <summary>
+            �������������� ������ ����� � ������
+            </summary>
+            <param name="value">����� �����</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.StrToReal(System.String)">
+            <summary>
+            �������������� ������ � ������������ �����
+            </summary>
+            <param name="value">������</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.RealToStr(System.Double)">
+            <summary>
+            �������������� ������������� ����� � ������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.StrToBoolean(System.String)">
+            <summary>
+            �������������� ������ � ���������� ��������
+            </summary>
+            <param name="value">������</param>
+            <returns>���������� ��������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.BooleanToStr(System.Boolean)">
+            <summary>
+            �������������� ����������� �������� � ������
+            </summary>
+            <param name="value">���������� ��������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.StrToBit(System.String)">
+            <summary>
+            �������������� ������ � ������� ������
+            </summary>
+            <param name="value">������</param>
+            <returns>������� ������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.BitToStr(System.Int64)">
+            <summary>
+            �������������� ������� ������ � ������
+            </summary>
+            <param name="value">������� ������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.StrToChar(System.String)">
+            <summary>
+            �������������� ������ � ������
+            </summary>
+            <param name="value">������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.CharToStr(System.Char)">
+            <summary>
+            �������������� ������� � ������
+            </summary>
+            <param name="value">������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.StrToCharArray(System.String)">
+            <summary>
+            �������������� ������ � ������ ��������
+            </summary>
+            <param name="value">������</param>
+            <returns>������ ��������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.CharArrayToStr(System.Char[])">
+            <summary>
+            �������������� ������� �������� � ������
+            </summary>
+            <param name="value">������ ��������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.ToStr(System.Object)">
+            <summary>
+            �������������� � ������
+            </summary>
+            <param name="value">������ ��������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.IntArrayToStr(System.Int32[])">
+            <summary>
+            �������������� �������������� ������� � ������
+            </summary>
+            <param name="value">������</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Convertion.StrToIntArray(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Convertion.Real2DArrayToStr(System.Double[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Convertion.ToString``1(``0[],System.String)">
+            <summary>
+            ������ � ������
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <param name="delimiter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Convertion.Split(System.String,System.Char)">
+            <summary>
+            ������� ������ �� �����
+            </summary>
+            <param name="value">�������� ������</param>
+            <param name="separator">�����������</param>
+            <returns>������ ������������ ������</returns>
+        </member>
+        <member name="M:TriadCore.Convertion.StrContains(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.TMath">
+            <summary>
+            �������������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.TMath.Round(System.Double)">
+            <summary>
+            ���������� � ���������� ������ �����
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>����� �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Sin(System.Double)">
+            <summary>
+            �����
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Cos(System.Double)">
+            <summary>
+            �������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Tan(System.Double)">
+            <summary>
+            �������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Sign(System.Double)">
+            <summary>
+            ���� �����
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>-1 | 0 | 1</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Abs(System.Int32)">
+            <summary>
+            ������ �����
+            </summary>
+            <param name="value">����� �����</param>
+            <returns>����� �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.AbsReal(System.Double)">
+            <summary>
+            ������ �����
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Ln(System.Double)">
+            <summary>
+            ����������� ��������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Log(System.Double)">
+            <summary>
+            ���������� ��������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Asin(System.Double)">
+            <summary>
+            ��������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Acos(System.Double)">
+            <summary>
+            ����������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Atan(System.Double)">
+            <summary>
+            ����������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Exp(System.Double)">
+            <summary>
+            ����������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Pow(System.Double,System.Double)">
+            <summary>
+            ���������� � �������
+            </summary>
+            <param name="x">������������ �����</param>
+            <param name="y">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.TMath.Sqrt(System.Double)">
+            <summary>
+            ���������� ������
+            </summary>
+            <param name="value">������������ �����</param>
+            <returns>������������ �����</returns>
+        </member>
+        <member name="T:TriadCore.Rand">
+            <summary>
+            ������� ��� ������ �� ���������� ����������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Rand.random">
+            <summary>
+            ��������� ��������� �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Rand.Random">
+            <summary>
+            ��������� ���������� ���������������� ������ �����
+            </summary>
+            <returns>��������� ����� �����</returns>
+        </member>
+        <member name="M:TriadCore.Rand.RandomIn(System.Int32,System.Int32)">
+            <summary>
+            ��������� ���������� ������ ����� �� ����������
+            </summary>
+            <param name="lowValue">����������� ��������</param>
+            <param name="topValue">������������ ��������</param>
+            <returns>��������� ����� �����</returns>
+        </member>
+        <member name="M:TriadCore.Rand.RandomReal">
+            <summary>
+            ��������� ���������� ������������� ����� ����� �� ���������� [0,1]
+            </summary>
+            <returns>��������� ������������ �����</returns>
+        </member>
+        <member name="M:TriadCore.Rand.RandomRealIn(System.Double,System.Double)">
+            <summary>
+            ��������� ���������� ������������� ����� ����� �� ����������
+            </summary>
+            <param name="lowValue">����������� ��������</param>
+            <param name="topValue">������������ ��������</param>
+            <returns>��������� ������������ �����</returns>
+        </member>
+        <member name="T:TriadCore.UniquePolusName">
+            <summary>
+            ���������� ��� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UniquePolusName.#ctor(TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="polusName">��� ������</param>
+            <param name="nodeName">��� �������</param>
+        </member>
+        <member name="P:TriadCore.UniquePolusName.PolusName">
+            <summary>
+            ��� ������
+            </summary>
+        </member>
+        <member name="P:TriadCore.UniquePolusName.NodeName">
+            <summary>
+            ��� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UniquePolusName.Equals(System.Object)">
+            <summary>
+            ������� ���������
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.UniquePolusName.GetHashCode">
+            <summary>
+            ��� �������
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.UniquePolusName.ToString">
+            <summary>
+            ��������� ���
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TriadCore.Design">
+            <summary>
+            ������� ����� ��� ���� ������-�������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Design.Build">
+            <summary>
+            �����, ������������ �������������
+            </summary>
+            <returns>������ �� ������-����</returns>
+        </member>
+        <member name="T:TriadCore.CommonEvent">
+            <summary>
+            ������� ������� ��� ������������ ������������
+            </summary>
+        </member>
+        <member name="F:TriadCore.CommonEvent.MaxEventTime">
+            <summary>
+            ���������� ����� ������������ �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.CommonEvent.#ctor(System.Double,TriadCore.Routine)">
+            <summary>
+            �����������
+            </summary>
+            <param name="executionTime">����� ������������ �������</param>
+            <param name="routine">������, �� ������� ������ ��������� �������</param>
+        </member>
+        <member name="M:TriadCore.CommonEvent.CompareTo(System.Object)">
+            <summary>
+            ������� ���������� ������� �� �������
+            </summary>
+        </member>
+        <member name="P:TriadCore.CommonEvent.ExecutionTime">
+            <summary>
+            ����� ������������ �������
+            </summary>
+            <remarks>����� ������ ���� ���������������, 
+            ����� ������������ ���������� ArgumentOutOfRangeException</remarks>
+            <value>executionTime</value>
+        </member>
+        <member name="M:TriadCore.CommonEvent.ExecuteAllEventHandlers">
+            <summary>
+            ������� ���������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.CommonEvent.Clone">
+            <summary>
+            ������������ �������
+            </summary>
+            <returns>����� ������</returns>
+        </member>
+        <member name="M:TriadCore.CommonEvent.Equals(System.Object)">
+            <summary>
+            �������� ���������
+            </summary>
+            <param name="obj">������ ������</param>
+            <returns>��������� ���������</returns>
+        </member>
+        <member name="M:TriadCore.CommonEvent.GetHashCode">
+            <summary>
+            ���
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.CommonEvent.op_GreaterThan(TriadCore.CommonEvent,TriadCore.CommonEvent)">
+            <summary>
+            �������� ������
+            </summary>
+            <param name="first">������ �������</param>
+            <param name="second">������ �������</param>
+            <returns>��������� ���������</returns>
+        </member>
+        <member name="M:TriadCore.CommonEvent.op_LessThan(TriadCore.CommonEvent,TriadCore.CommonEvent)">
+            <summary>
+            �������� ������
+            </summary>
+            <param name="first">������ �������</param>
+            <param name="second">������ �������</param>
+            <returns>��������� ���������</returns>
+        </member>
+        <member name="F:TriadCore.CommonEvent.routine">
+            <summary>
+            ������, �� ������� ���������� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.CommonEvent.executionTime">
+            <summary>
+            ����� ������������ �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.CommonEvent.EventSpyHandler">
+            <summary>
+            ������������������ ����������� ������� (����������� ����� ������������ ���������� �� ��)
+            </summary>
+        </member>
+        <member name="T:TriadCore.InternalEventHandler">
+            <summary>
+            �������� ����������� ����������� ������� ������
+            </summary>
+        </member>
+        <member name="T:TriadCore.ReceivingMessageEventHandler">
+            <summary>
+            �������� ����������� ������� �������� ���������
+            </summary>
+            <param name="routinePolusName">��� ������ ������, ���������� ���������</param>
+            <param name="nodePolusName">��� ������ �������, ���������� ���������</param>
+            <param name="message">�������� ���������</param>
+            <param name="spyHandler">������������������ ����������� �������� ���������</param>
+        </member>
+        <member name="T:TriadCore.InternalEvent">
+            <summary>
+            ���������� ������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.InternalEvent.#ctor(System.Double,TriadCore.Routine)">
+            <summary>
+            �����������
+            </summary>
+            <param name="executionTime">����� ������������ �������</param>
+            <param name="routine">������, �� ������� ���������� �������</param>
+        </member>
+        <member name="M:TriadCore.InternalEvent.ExecuteAllEventHandlers">
+            <summary>
+            ������� ���������� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.InternalEvent.EventHandler">
+            <summary>
+            ������������������ ����������� �������
+            </summary>
+        </member>
+        <member name="T:TriadCore.ReceivingMessageEvent">
+            <summary>
+            ������� ��������� ���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.ReceivingMessageEvent.#ctor(System.Double,TriadCore.Routine,TriadCore.CoreName,TriadCore.CoreName,System.String)">
+            <summary>
+            �����������
+            </summary>
+            <param name="executionTime">����� ������������ �������</param>
+            <param name="routine">������, �� ������� ���������� �������</param>
+            <param name="routinePolusName">��� ������ ������, ���������� ���������</param>
+            <param name="nodePolusName">��� ������ �������, ���������� ���������</param>
+            <param name="message">��������� ���������</param>
+        </member>
+        <member name="M:TriadCore.ReceivingMessageEvent.ExecuteAllEventHandlers">
+            <summary>
+            ������� ���������� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.ReceivingMessageEvent.OnEventFunction">
+            <summary>
+            ������������������ ����������� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.ReceivingMessageEvent.routinePolusName">
+            <summary>
+            ��� ������ ������, ���������� ���������
+            </summary>
+        </member>
+        <member name="F:TriadCore.ReceivingMessageEvent.nodePolusName">
+            <summary>
+            ��� ������ �������, ���������� ���������
+            </summary>
+        </member>
+        <member name="F:TriadCore.ReceivingMessageEvent.message">
+            <summary>
+            ��������� ���������
+            </summary>
+        </member>
+        <member name="T:TriadCore.SetFunctions">
+            <summary>
+            Функции, работающие с множествами
+            </summary>
+        </member>
+        <member name="M:TriadCore.SetFunctions.GetSetSize(TriadCore.Set)">
+            <summary>
+            Получить размер мн-ва
+            </summary>
+            <param name="set">Множество</param>
+            <returns>Размер мн-ва</returns>
+        </member>
+        <member name="T:TriadCore.ICondition">
+            <summary>
+            ������� �������������
+            </summary>
+        </member>
+        <member name="F:TriadCore.ICondition.iprocedureList">
+            <summary>
+            ������ ������������ �������������� ��������
+            </summary>
+        </member>
+        <member name="F:TriadCore.ICondition.structExprStack">
+            <summary>
+            ���� ��� ��������� ����������� ���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.ICondition.AddIProcedure(TriadCore.IProcedure,System.Int32)">
+            <summary>
+            �������� �������������� ���������
+            </summary>
+            <param name="iprocedure">���. ���������</param>
+            <param name="ipNumber">����� ��</param>
+        </member>
+        <member name="M:TriadCore.ICondition.GetIProcedure(System.Int32)">
+            <summary>
+            �������� �������������� ��������� �� �� ����������� ������
+            </summary>
+            <param name="iprocedureNumber">���������� �����</param>
+            <returns>���. ���������</returns>
+        </member>
+        <member name="M:TriadCore.ICondition.GetIProcedureCount">
+            <summary>
+            �������� ���-�� �������������� ��������
+            </summary>
+            <returns>���-�� �������������� ��������</returns>
+        </member>
+        <member name="M:TriadCore.ICondition.GetICondition(System.Int32)">
+            <summary>
+            �������� ������� ������������� �� ��� ����������� ������
+            </summary>
+            <param name="iconditionNumber">���������� �����</param>
+            <returns>������� �������������</returns>
+        </member>
+        <member name="M:TriadCore.ICondition.InitializeAllIProcedure">
+            <summary>
+            ��������� ������ ������������� � ���� ������������������ ��
+            </summary>
+        </member>
+        <member name="M:TriadCore.ICondition.InitializeIProcedure(System.Int32)">
+            <summary>
+            ��������� ������ ������������� � ������������������ ��
+            </summary>
+            <param name="ipNumber">���������� ����� ��</param>
+        </member>
+        <member name="M:TriadCore.ICondition.DoCheck(System.Double)">
+            <summary>
+            ���������, ����� �� ���������� �������������
+            </summary>
+            <param name="SystemTime">������� ��������� �����</param>
+            <returns>True, ���� ����� ����������</returns>
+        </member>
+        <member name="M:TriadCore.ICondition.Initialize(TriadCore.Graph)">
+            <summary>
+            
+            </summary>
+            <param name="Model"></param>
+        </member>
+        <member name="T:TriadCore.Calendar">
+            <summary>
+            ��������� �������, ������������ ������������ �������.
+            </summary>
+        </member>
+        <member name="M:TriadCore.Calendar.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="P:TriadCore.Calendar.SystemTime">
+            <summary>
+            ������� ��������� �����
+            </summary>
+            <remarks>�� ��������� �� ������ ������������� ����� ����� 0.
+            ���� �������� ��������� �����, �� ����� ������� ��� ����� ��������������� �������
+            � �������� ������������, �������, ��� ����� ��������� �����
+            ��������� ����� �� ������ ���� �������������</remarks>
+        </member>
+        <member name="M:TriadCore.Calendar.PlaneEvent(TriadCore.CommonEvent)">
+            <summary>
+            ������������� �������
+            </summary>
+            <remarks>����������� ������ �� �������, �����
+            ������� �� ������ �������� ����������. �����
+            ����� ����������</remarks>
+            <param name="ev">����������� �������</param>
+        </member>
+        <member name="M:TriadCore.Calendar.CancelEvent(System.EventHandler)">
+            <summary>
+            �������� ��� ������� � ��������� ������������
+            </summary>
+            <param name="eventHandler">���������� �������</param>
+        </member>
+        <member name="P:TriadCore.Calendar.HasEventToExecute">
+            <summary>
+            ������� ��������������� �������
+            </summary>
+            <returns>true, ���� ����</returns>
+        </member>
+        <member name="M:TriadCore.Calendar.DoNextEvent">
+            <summary>
+            ��������� ��������� �������
+            </summary>
+        </member>
+        <member name="P:TriadCore.Calendar.NextEventTime">
+            <summary>
+            �������� ����� ���������� ���������������� �������
+            </summary>
+            <returns>����� (���� ������� ��� - double.MaxValue)</returns>
+        </member>
+        <member name="M:TriadCore.Calendar.Reload">
+            <summary>
+            �������� ��������� ������� � ��������� ���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Calendar.Clone">
+            <summary>
+            �����������
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:TriadCore.Calendar.systemTime">
+            <summary>
+            ������� ��������� �����
+            </summary>
+        </member>
+        <member name="F:TriadCore.Calendar.eventList">
+            <summary>
+            ������ ��������������� �������
+            </summary>
+        </member>
+        <member name="T:TriadCore.Node">
+            <summary>
+            ���������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Node.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param polusName="polusName">��� �������</param>
+        </member>
+        <member name="P:TriadCore.Node.Name">
+            <summary>
+            ��� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Node.ToString">
+            <summary>
+            ���������� ��� �������
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TriadCore.Node.Poluses">
+            <summary>
+            ������ ������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Node.Clone">
+            <summary>
+            �������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TriadCore.Node.Item(TriadCore.CoreName)">
+            <summary>
+            ���������� �������
+            </summary>
+            <param name="polusName">��� �������� ������</param>
+            <returns></returns>
+        </member>
+        <member name="P:TriadCore.Node.Item(System.Int32)">
+            <summary>
+            ���������� �������
+            </summary>
+            <param name="polusIndex">������ ������ � �������</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Node.DeclarePolus(TriadCore.CoreName)">
+            <summary>
+            �������� �����
+            </summary>
+            <param name="polusName">��� ������</param>
+        </member>
+        <member name="M:TriadCore.Node.DeclarePolus(TriadCore.CoreNameRange)">
+            <summary>
+            �������� ��������� �������
+            </summary>
+            <param name="polusNameRange">��� ������</param>
+        </member>
+        <member name="M:TriadCore.Node.Add(TriadCore.Polus)">
+            <summary>
+            ��������� � �������
+            </summary>
+            <param name="polus">�����</param>
+        </member>
+        <member name="M:TriadCore.Node.Add(TriadCore.Node)">
+            <summary>
+            ����� ������ ���� ������
+            </summary>
+            <param name="node">������ �������</param>
+            <returns> ��������� �������</returns>
+        </member>
+        <member name="M:TriadCore.Node.Subtract(TriadCore.Node)">
+            <summary>
+            ������� ������ ���������� ������� �� �������
+            </summary>
+            <param name="node">�������</param>
+        </member>
+        <member name="M:TriadCore.Node.RemovePolus(TriadCore.CoreName)">
+            <summary>
+            ������� �����
+            </summary>
+            <param name="polusName">��� ������</param>
+        </member>
+        <member name="M:TriadCore.Node.Multiply(TriadCore.Node)">
+            <summary>
+            �������� ������� ������� � ������ �� �������
+            </summary>
+            <param name="node">������ �������</param>
+        </member>
+        <member name="M:TriadCore.Node.AddArc(TriadCore.Polus,TriadCore.Polus)">
+            <summary>
+            �������� ����
+            </summary>
+            <param name="polusFrom">��������� ����� (������������ � ������� �������)</param>
+            <param name="polusTo">�������� �����</param>
+        </member>
+        <member name="M:TriadCore.Node.HasPoluses">
+            <summary>
+            ������� ������� � �������
+            </summary>
+            <returns>���� �� ������</returns>
+        </member>
+        <member name="M:TriadCore.Node.RemoveAllPoluses">
+            <summary>
+            ������� ��� ������ �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Node.op_Addition(TriadCore.Node,TriadCore.Node)">
+            <summary>
+            �������� ������� ������� ���� ������
+            </summary>
+            <param name="node1">1 �������</param>
+            <param name="node2">2 �������</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Node.op_Subtraction(TriadCore.Node,TriadCore.Node)">
+            <summary>
+            �������� ��������� ������� ������ ������� �� ������ 
+            </summary>
+            <param name="node1">1 �������</param>
+            <param name="node2">2 �������</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Node.op_Multiply(TriadCore.Node,TriadCore.Node)">
+            <summary>
+            �������� ����������� ������ �� �������
+            </summary>
+            <param name="node1">1 �������</param>
+            <param name="node2">2 �������</param>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Node.SendMessageVia(System.String,TriadCore.CoreName,System.Double)">
+            <summary>
+            ������� ��������� ����� �����
+            </summary>
+            <param name="message">���������</param>
+            <param name="polusName">��� ������</param>
+            <param name="sendMessageTime">����� ������� ���������</param>
+        </member>
+        <member name="M:TriadCore.Node.ReceiveMessageVia(TriadCore.CoreName,System.String,System.Double)">
+            <summary>
+            �������� ��������� ����� �����
+            </summary>
+            <param name="polusName">��� ������</param>
+            <param name="message">���������</param>
+            <param name="sendMessageTime">����� ������� ���������</param>
+        </member>
+        <member name="M:TriadCore.Node.RegisterRoutine(TriadCore.Routine)">
+            <summary>
+            ������ ������
+            </summary>
+            <param name="routine">������</param>
+        </member>
+        <member name="M:TriadCore.Node.InitializeRoutine">
+            <summary>
+            ���������������� ������ �������, ���� ��� ����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Node.DoRoutineInitialSection">
+            <summary>
+            ��������� ������ ������������� � ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Node.CreateSpyObject(TriadCore.CoreName,TriadCore.SpyObjectType)">
+            <summary>
+            ������� ������ �������� �� �������� � ������ �������
+            </summary>
+            <param name="objectName">��� �������</param>
+            <param name="objectType">��� �������</param>
+            <returns>������</returns>
+        </member>
+        <member name="M:TriadCore.Node.CreateSpyObject(TriadCore.CoreNameRange,TriadCore.SpyObjectType)">
+            <summary>
+            ������� �������� �������� ��������
+            </summary>
+            <param name="objectNameRange">��� ���������</param>
+            <param name="objectType">��� ��������</param>
+            <returns>��������</returns>
+        </member>
+        <member name="P:TriadCore.Node.NodeRoutine">
+            <summary>
+            ������, ���������� �� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Node.nodeRoutine">
+            <summary>
+            ������������� � ������� ������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Node.coreName">
+            <summary>
+            ��� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Node.polusList">
+            <summary>
+            ������ ������� �������
+            </summary>
+        </member>
+        <member name="T:TriadCore.Graph">
+            <summary>
+            ���������� �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Graph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Graph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.Graph.CreateNew">
+            <summary>
+            ������� ����� ����  (���������� ��� ������������� ��������)
+            </summary>
+            <returns>����� ����</returns>
+        </member>
+        <member name="P:TriadCore.Graph.Name">
+            <summary>
+            ��� �����
+            </summary>
+        </member>
+        <member name="P:TriadCore.Graph.Item(TriadCore.CoreName)">
+            <summary>
+            ���������� ������
+            </summary>
+            <value>��� �������</value>
+        </member>
+        <member name="P:TriadCore.Graph.Item(System.Int32)">
+            <summary>
+            ���������� ������
+            </summary>
+            <value>������ ������� � �����</value>
+        </member>
+        <member name="M:TriadCore.Graph.ToString">
+            <summary>
+            ���������� ��� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TriadCore.Graph.Nodes">
+            <summary>
+            ������ ������ �����
+            </summary>
+        </member>
+        <member name="P:TriadCore.Graph.NodeCount">
+            <summary>
+            ����� ������ � �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Graph.Clone">
+            <summary>
+            �������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Graph.DeclareNode(TriadCore.CoreName)">
+            <summary>
+            �������� �������
+            </summary>
+            <param name="nodeName">��� �������</param>
+        </member>
+        <member name="M:TriadCore.Graph.DeclareNode(TriadCore.CoreName,TriadCore.CoreName[])">
+            <summary>
+            �������� ������� ������ � �� ��������
+            </summary>
+            <param name="nodeName">��� �������</param>
+            <param name="polusNameList">������ ���� ������� �������</param>
+        </member>
+        <member name="M:TriadCore.Graph.DeclareNode(TriadCore.CoreNameRange)">
+            <summary>
+            �������� ��������� ������
+            </summary>
+            <param name="nodeNameRange">����� ������</param>
+        </member>
+        <member name="M:TriadCore.Graph.DeclarePolusInAllNodes(TriadCore.CoreName)">
+            <summary>
+            �������� ����� �� ���� ��������
+            </summary>
+            <param name="polusName">��� ������</param>
+        </member>
+        <member name="M:TriadCore.Graph.DeclarePolusInAllNodes(TriadCore.CoreNameRange)">
+            <summary>
+            �������� ��������� ������� �� ���� ��������
+            </summary>
+            <param name="polusNameRange">����� �������</param>
+        </member>
+        <member name="M:TriadCore.Graph.AddArc(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary> 
+            �������� ����
+            </summary>
+            <param name="nodeFromName">��������� �������</param>
+            <param name="polusFromName">��� ���������� ������</param>
+            <param name="nodeToName">�������� ������� </param>
+            <param name="polusToName">��� ��������� ������</param>
+        </member>
+        <member name="M:TriadCore.Graph.AddEdge(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            �������� �����
+            </summary>
+            <param name="nodeFromName">��������� �������</param>
+            <param name="polusFromName">��� ���������� ������</param>
+            <param name="nodeToName">�������� ������� </param>
+            <param name="polusToName">��� ��������� ������</param>
+        </member>
+        <member name="M:TriadCore.Graph.Add(TriadCore.Node)">
+            <summary>
+            ��������� � ��������
+            </summary>
+            <param name="node">�������</param>
+        </member>
+        <member name="M:TriadCore.Graph.Add(TriadCore.Graph)">
+            <summary>
+            ��������� � ������
+            </summary>
+            <param name="graph">����������� ����</param>
+        </member>
+        <member name="M:TriadCore.Graph.Subtract(TriadCore.Node)">
+            <summary>
+            ������� ������� �� ����� 
+            </summary>
+            <param name="node">�������</param>
+            <remarks>���� ����� ��������� � ������� � ��� �� ������ �� �������� �������, �� ��� ��������� �� �����
+            ���� � ���������� ������� ��� �������, �� �������� ������� ���� ���������</remarks>
+        </member>
+        <member name="M:TriadCore.Graph.RemoveNode(TriadCore.CoreName)">
+            <summary>
+            ������� ������� �� �����
+            </summary>
+            <param name="nodeName">��� ��������� �������</param>
+        </member>
+        <member name="M:TriadCore.Graph.Subtract(TriadCore.Graph)">
+            <summary>
+            ������� ����
+            </summary>
+            <param name="graph">����</param>
+        </member>
+        <member name="M:TriadCore.Graph.Multiply(TriadCore.Graph)">
+            <summary>
+            �������� ������� ���� � ������
+            </summary>
+            <param name="graph">������ ����</param>
+        </member>
+        <member name="M:TriadCore.Graph.RemoveAllNodes">
+            <summary>
+            ������� ��� ������� �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Graph.CompleteGraph">
+            <summary>
+            ��������� ���� ����������������� ������� � ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Graph.RegisterRoutine(TriadCore.CoreName,TriadCore.Routine)">
+            <summary>
+            ������ ������ ��� ������� � �����
+            </summary>
+            <param name="nodeName">��� �������</param>
+            <param name="routine">������</param>
+        </member>
+        <member name="M:TriadCore.Graph.RegisterRoutine(TriadCore.CoreNameRange,TriadCore.Routine)">
+            <summary>
+            ������ ������ ��� ��������� ������ � �����
+            </summary>
+            <param name="nodeNameRange">�������� ���� ������</param>
+            <param name="routine">������</param>
+        </member>
+        <member name="M:TriadCore.Graph.RegisterRoutineInAllNodes(TriadCore.Routine)">
+            <summary>
+            ������ ������ ��� ���� ������ �����
+            </summary>
+            <param name="routine">������������� ������</param>
+        </member>
+        <member name="M:TriadCore.Graph.InitializeRoutineInAllNodes">
+            <summary>
+            ���������������� ������ ���� ������
+            </summary>
+        </member>
+        <member name="T:TriadCore.Graph.CheckEndOfModelling">
+            <summary>
+            �������� ������� ��������� �������������
+            </summary>
+            <param name="currSystemTime">������� ��������� �����</param>
+            <returns>True, ���� ������������� ����� ����������</returns>
+        </member>
+        <member name="M:TriadCore.Graph.DoSimulate(TriadCore.Graph.CheckEndOfModelling)">
+            <summary>
+            ������ ������� ��������
+            </summary>
+            <param name="checkEndOfModelling">�������� ������� ��������� �������������</param>
+        </member>
+        <member name="M:TriadCore.Graph.DoSimulate(TriadCore.ICondition[])">
+            <summary>
+            ������ ������� ��������
+            </summary>
+            <param name="iConditions">������� �������������</param>
+        </member>
+        <member name="M:TriadCore.Graph.DoSimulate(System.Double)">
+            <summary>
+            ������ ������� ��������
+            </summary>
+            <param name="endTime">�������� ����� �������������</param>
+        </member>
+        <member name="M:TriadCore.Graph.DefineOutPolus(TriadCore.CoreName,TriadCore.UniquePolusName)">
+            <summary>
+            �������� �������� ����� �����
+            </summary>
+            <param name="outPolusName">��� ��������� ������</param>
+            <param name="internalPolusName">��� ����������� ������</param>
+        </member>
+        <member name="M:TriadCore.Graph.OpenNode(TriadCore.CoreName,TriadCore.Graph,TriadCore.CoreName[])">
+            <summary>
+            ������������ ������� �������� ����� ������ ������
+            </summary>
+            <param name="nodeName">��� ���������������� ������� �������� �����</param>
+            <param name="graph">����, ������� ������������� ������ ���������������� �������</param>
+            <param name="polusPairList">������ ������������ ���� ������� ����������������
+            ������� � ������� ������� ���������� �����</param>
+        </member>
+        <member name="F:TriadCore.Graph.systemTime">
+            <summary>
+            ��������� �����
+            </summary>
+        </member>
+        <member name="F:TriadCore.Graph.coreName">
+            <summary>
+            ��� �����
+            </summary>
+        </member>
+        <member name="F:TriadCore.Graph.nodeList">
+            <summary>
+            ������ ���������� � ���� ������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Graph.outPolusList">
+            <summary>
+            ������ �������� ������� �����
+            Key - ��� ��������� ������
+            Value - ��� ���������������� ����������� ������
+            </summary>
+        </member>
+        <member name="T:TriadCore.CicleGraph">
+            <summary>
+            ���������� ����� ���� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.CicleGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.CicleGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.CicleGraph.CompleteGraph">
+            <summary>
+            ��������� ����� "�� ���������".
+            ����� ������������� �� ������� ������ ������ �������
+            � ������� ������ ��������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.CicleGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.UndirectedCicleGraph">
+            <summary>
+            ���������� ����� ���� �������������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UndirectedCicleGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UndirectedCicleGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.UndirectedCicleGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.DirectedCicleGraph">
+            <summary>
+            ���������� ����� ���� ������������ ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.DirectedCicleGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.DirectedCicleGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.DirectedCicleGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.PathGraph">
+            <summary>
+            ���������� ����� ���� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.PathGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.PathGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.PathGraph.CompleteGraph">
+            <summary>��������� ���� ����������������� ������� � ������
+            ������ ����������� ������ ����� ������� ������� �
+            ������ ������� ��������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.PathGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.UndirectedPathGraph">
+            <summary>
+            ���������� ����� ���� �������������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UndirectedPathGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UndirectedPathGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.UndirectedPathGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.DirectedPathGraph">
+            <summary>
+            ���������� ����� ���� ������������ �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.DirectedPathGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.DirectedPathGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.DirectedPathGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.Polus">
+            <summary>
+            ���������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Polus.#ctor(TriadCore.CoreName,TriadCore.Node)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� ������</param>
+            <param name="baseNode">���������� ����� �������</param>
+        </member>
+        <member name="P:TriadCore.Polus.Name">
+            <summary>
+            ��� ������
+            </summary>
+        </member>
+        <member name="P:TriadCore.Polus.UniqueName">
+            <summary>
+            ���������� ��� ������
+            </summary>
+        </member>
+        <member name="P:TriadCore.Polus.BaseNode">
+            <summary>
+            ������������ �������
+            </summary>
+        </member>
+        <member name="P:TriadCore.Polus.TargetInputPoluses">
+            <summary>
+            ������ �������, �� ������� ���� ������� ����
+            </summary>
+        </member>
+        <member name="P:TriadCore.Polus.TargetOutputPoluses">
+            <summary>
+            ������ �������, � ������� ���� �������� ����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Polus.ToString">
+            <summary>
+            ���������� ��� ������
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Polus.Clone">
+            <summary>
+            �������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Polus.Add(TriadCore.Polus)">
+            <summary>
+            ����� ������ �� �����
+            </summary>
+            <returns>��������� �������</returns>
+            <param name="polus">������ �����</param>
+        </member>
+        <member name="M:TriadCore.Polus.Multiply(TriadCore.Polus)">
+            <summary>
+            �������� ������� ����� � ������ �� �����
+            </summary>
+            <param name="polus">������ �����</param>
+        </member>
+        <member name="M:TriadCore.Polus.AddInputArc(TriadCore.Polus)">
+            <summary>
+            �������� ������� ����
+            </summary>
+            <param name="targetPolus">������, �� �������� ���� ����</param>
+        </member>
+        <member name="M:TriadCore.Polus.AddOutputArc(TriadCore.Polus)">
+            <summary>
+            �������� �������� ����
+            </summary>
+            <param name="targetPolus"> ������, � �������� ���� ����</param>
+        </member>
+        <member name="M:TriadCore.Polus.RemoveInputArc(TriadCore.UniquePolusName)">
+            <summary>
+            ������� ��������� ����
+            </summary>
+            <param name="targetPolusName">�������� �����</param>
+        </member>
+        <member name="M:TriadCore.Polus.RemoveInputArc(TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ������� ��������� ����
+            </summary>
+            <param name="targetPolusName">�������� �����</param>
+            <param name="targetNodeName">�������� �������</param>
+        </member>
+        <member name="M:TriadCore.Polus.RemoveOutputArc(TriadCore.UniquePolusName)">
+            <summary>
+            ������� �������� ����
+            </summary>
+            <param name="targetPolusName">�������� �����</param>
+        </member>
+        <member name="M:TriadCore.Polus.RemoveOutputArc(TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ������� �������� ����
+            </summary>
+            <param name="targetPolusName">�������� �����</param>
+            <param name="targetNodeName">�������� �������</param>
+        </member>
+        <member name="M:TriadCore.Polus.RemoveAllArcs">
+            <summary>
+            ������� ��� ����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Polus.SendMessage(System.String,System.Double)">
+            <summary>
+            ������� ��������� ���� �����������
+            </summary>
+            <param name="message">���������</param>
+            <param name="sendMessageTime">����� ������� ���������</param>
+        </member>
+        <member name="M:TriadCore.Polus.ReceiveMessage(System.String,System.Double)">
+            <summary>
+            �������� ���������
+            </summary>
+            <param name="message">���������</param>
+            <param name="sendMessageTime">����� ������� ���������</param>
+        </member>
+        <member name="F:TriadCore.Polus.coreName">
+            <summary>
+            ��������� ���
+            </summary>
+        </member>
+        <member name="F:TriadCore.Polus.uniqueName">
+            <summary>
+            ���������� ��� (�������� ��� �������)
+            </summary>
+        </member>
+        <member name="F:TriadCore.Polus.baseNode">
+            <summary>
+            ������� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Polus.inputArcList">
+            <summary>
+            ������ ������� ���
+            </summary>
+        </member>
+        <member name="F:TriadCore.Polus.outputArcList">
+            <summary>
+            ������ �������� ���
+            </summary>
+        </member>
+        <member name="T:TriadCore.SpyHandler">
+            <summary>
+            ���������� ���������
+            </summary>
+            <param name="Info">������ ��������</param>
+            <param name="systemTime">����� ���������</param>
+        </member>
+        <member name="T:TriadCore.Routine">
+            <summary>
+            ������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Routine.DefaultIndex">
+            <summary>
+            ������ � ������ ���������� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Routine.indexOfPolusReceivedMessage">
+            <summary>
+            ������ ������, ���������� ���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Routine.CreateNew">
+            <summary>
+            ������� ����� ������ (���������� ��� ������������� ��������)
+            </summary>
+            <returns>����� ������</returns>
+        </member>
+        <member name="M:TriadCore.Routine.Schedule(System.Double,TriadCore.InternalEventHandler[])">
+            <summary>
+            ������������ �������
+            </summary>
+            <param name="deltaTime">����� �������� ������������ �������</param>
+            <param name="eventHandlerList">����������� �������, ������������ � ��� �����</param>
+        </member>
+        <member name="M:TriadCore.Routine.Cancel(TriadCore.InternalEventHandler[])">
+            <summary>
+            �������� ��������� ������� � ������ �������������
+            </summary>
+            <param name="eventHandlerList">����������� �������</param>
+        </member>
+        <member name="M:TriadCore.Routine.SendMessageVia(System.String,TriadCore.CoreName)">
+            <summary>
+            ������� ��������� ����� �����
+            </summary>
+            <param name="message">���������</param>
+            <param name="routinePolusName">��� ������ ������, ����� ������� ���������� ���������</param>
+        </member>
+        <member name="M:TriadCore.Routine.SendMessageViaAllPoluses(System.String)">
+            <summary>
+            ������� ��������� ����� ��� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Routine.SendMessageVia(System.String,TriadCore.CoreNameRange)">
+            <summary>
+            ������� ��������� ����� �������� �������
+            </summary>
+            <param name="message">���������</param>
+            <param name="routineCoreNameRange">�������� ������� ������, ����� ������� ���������� ���������</param>
+        </member>
+        <member name="M:TriadCore.Routine.GetPolusIndex(TriadCore.CoreName)">
+            <summary>
+            �������� ������ ������
+            </summary>
+            <param name="polusName">��� ������</param>
+            <returns>������ ������ ��� -1, ���� � ������ ��� ��������</returns>
+        </member>
+        <member name="M:TriadCore.Routine.ReceiveMessage(TriadCore.CoreName,System.String,System.Double)">
+            <summary>
+            �������� ��������� ����� �����
+            </summary>
+            <param name="nodePolusName">��� ������ �������</param>
+            <param name="message">���������</param>
+            <param name="sendMessageTime">����� ������� ���������</param>
+        </member>
+        <member name="M:TriadCore.Routine.ReceiveMessageHandler(TriadCore.CoreName,TriadCore.CoreName,System.String,TriadCore.SpyHandler)">
+            <summary>
+            ���������� ������ ���������
+            ����� ���������� �����, ����� ��������� ����������������� ������
+            � ������ ������ ���������� ������� (� �� � ������� ReceiveMessage)
+            </summary>
+            <param name="routinePolusName">��� ������, ���������� ���������</param>
+            <param name="nodePolusName">��� ������ �������, ���������� ���������</param>
+            <param name="message">���������</param>
+            <param name="spyHandler">����������� �������� ���������</param>
+        </member>
+        <member name="M:TriadCore.Routine.ReceiveMessageVia(TriadCore.CoreName,System.String)">
+            <summary>
+            ���������������� ���������� ���������
+            </summary>
+            <param name="polusName">��� ������ ��� ������� �������</param>
+            <param name="message">���������</param>
+        </member>
+        <member name="M:TriadCore.Routine.DoInitialize">
+            <summary>
+            �������� �� ������������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.Routine.Initialize(TriadCore.Node)">
+            <summary>
+            �������� �� ������������� ������
+            </summary>
+            <param name="baseNode">������������ �������</param>
+        </member>
+        <member name="M:TriadCore.Routine.Clone">
+            <summary>
+            �������� �����
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TriadCore.Routine.AddPolusPair(TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            �������� ������������ ����� ������ ������ � ������� � � ������
+            </summary>
+            <param name="routinePolusName">��� ������ � ������</param>
+            <param name="nodePolusName">��� ������ � �������</param>
+        </member>
+        <member name="M:TriadCore.Routine.AddPolusPair(TriadCore.CoreName,TriadCore.CoreNameRange)">
+            <summary>
+            �������� ������������ ����� ������� ������ � ������ ������� ������� �� ������
+            </summary>
+            <param name="routinePolusName">����� ������</param>
+            <param name="nodePolusNameRange">������ ������� �������</param>
+        </member>
+        <member name="M:TriadCore.Routine.AddPolusPair(TriadCore.CoreNameRange,TriadCore.CoreName)">
+            <summary>
+            �������� ������������ ����� ������ ������� ������ �� ������ � ������� �������
+            </summary>
+            <param name="routinePolusNameRange">������ ������� ������</param>
+            <param name="nodePolusName">����� �������</param>
+        </member>
+        <member name="M:TriadCore.Routine.AddPolusPair(TriadCore.CoreNameRange,TriadCore.CoreNameRange)">
+            <summary>
+            �������� ������������ ����� �������� ������� ������ � �������
+            </summary>
+            <param name="routinePolusNameRange"></param>
+            <param name="nodePolusNameRange"></param>
+        </member>
+        <member name="M:TriadCore.Routine.ClearPolusPairList">
+            <summary>
+            �������� ������ ������������ ����� ������� ������� � ��������� � � ������
+            </summary>
+        </member>
+        <member name="P:TriadCore.Routine.SystemTime">
+            <summary>
+            ��������� �����
+            </summary>
+        </member>
+        <member name="M:TriadCore.Routine.BlockPolus(TriadCore.CoreName)">
+            <summary>
+            ������������� ����� ��� �������/�������� ���������
+            </summary>
+            <param name="routinePolusName">��� ������ � ������</param>
+        </member>
+        <member name="M:TriadCore.Routine.BlockPolus(TriadCore.CoreNameRange)">
+            <summary>
+            ������������� ����� ��� �������/�������� ���������
+            </summary>
+            <param name="routineNameRange">�������� ���� ������� � ������</param>
+        </member>
+        <member name="M:TriadCore.Routine.BlockNodePolus(TriadCore.CoreName)">
+            <summary>
+            ������������� ����� ��� �������/�������� ���������
+            </summary>
+            <param name="nodePolusName">��� ������ � �������</param>
+        </member>
+        <member name="M:TriadCore.Routine.UnblockPolus(TriadCore.CoreName)">
+            <summary>
+            �������������� ����� ��� �������/�������� ���������
+            </summary>
+            <param name="routinePolusName">��� ������ ������</param>
+        </member>
+        <member name="M:TriadCore.Routine.UnblockPolus(TriadCore.CoreNameRange)">
+            <summary>
+            �������������� ����� ��� �������/�������� ���������
+            </summary>
+            <param name="routineNameRange">�������� ���� ������� ������</param>
+        </member>
+        <member name="M:TriadCore.Routine.UnblockNodePolus(TriadCore.CoreName)">
+            <summary>
+            �������������� ����� ��� �������/�������� ���������
+            </summary>
+            <param name="nodePolusName">��� ������ �������</param>
+        </member>
+        <member name="M:TriadCore.Routine.PrintMessage(System.Object)">
+            <summary>
+            ���������� ������
+            </summary>
+            <param name="message">���������</param>
+        </member>
+        <member name="P:TriadCore.Routine.EventCalendar">
+            <summary>
+            ��������� ������� ������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Routine.baseNode">
+            <summary>
+            �������, ���������� ������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Routine.eventCalendar">
+            <summary> 
+            ��������� �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Routine.routineNodePolusPairs">
+            <summary>
+            ������ ������������ ����: Key - ��� ������ � ������; Value - ����� ��������� � ��� ������� � �������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Routine.nodeRoutinePolusPairs">
+            <summary>
+            ������ ������������ ����: Key - ��� ������ � �������; Value - ����� ��������� � ��� ������� � ������
+            </summary>
+        </member>
+        <member name="F:TriadCore.Routine.routineBlockedPolusList">
+            <summary>
+            ������ ��������������� ��� �������/�������� ��������� ������� ������
+            </summary>
+        </member>
+        <member name="T:TriadCore.StarGraph">
+            <summary>
+            ���������� ����� ���� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StarGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StarGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.StarGraph.CompleteGraph">
+            <summary>
+            ��������� ����� "�� ���������".
+            ����� ������������� �� ������� ������ ������
+            ������� � ������� ������ ������ ��������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StarGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.UndirectedStarGraph">
+            <summary>
+            ���������� ����� ���� �������������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UndirectedStarGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.UndirectedStarGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.UndirectedStarGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.DirectedStarGraph">
+            <summary>
+            ���������� ����� ���� ������������ ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.DirectedStarGraph.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.DirectedStarGraph.#ctor(TriadCore.CoreName)">
+            <summary>
+            �����������
+            </summary>
+            <param name="coreName">��� �����</param>
+        </member>
+        <member name="M:TriadCore.DirectedStarGraph.AddConnection(TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName,TriadCore.CoreName)">
+            <summary>
+            ���������� "������" ����������
+            </summary>
+            <param name="nodeName1">��� ������ �������</param>
+            <param name="polusName1">��� ������� ������</param>
+            <param name="nodeName2">��� ������ �������</param>
+            <param name="polusName2">��� ������� ������</param>
+        </member>
+        <member name="T:TriadCore.IStructExprStack">
+            <summary>
+            ��������� ����� ��� ��������� ����������� ���������
+            </summary>
+        </member>
+        <member name="T:TriadCore.StructExprStack">
+            <summary>
+            ���� ��� ��������� ����������� ���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushGraph(TriadCore.Graph)">
+            <summary>
+            �������� � ���� ����� ����
+            </summary>
+            <param name="graph">����������� ����</param>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushEmptyGraph">
+            <summary>
+            �������� � ���� ������ ����
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushEmptyUndirectPathGraph">
+            <summary>
+            �������� � ���� ������ ���� - �������������� �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushEmptyDirectPathGraph">
+            <summary>
+            �������� � ���� ������ ���� - ������������ �������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushEmptyUndirectCicleGraph">
+            <summary>
+            �������� � ���� ������ ���� - �������������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushEmptyDirectCicleGraph">
+            <summary>
+            �������� � ���� ������ ���� - ������������ ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushEmptyUndirectStarGraph">
+            <summary>
+            �������� � ���� ������ ���� - �������������� ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PushEmptyDirectStarGraph">
+            <summary>
+            �������� � ���� ������ ���� - ������������ ������
+            </summary>
+        </member>
+        <member name="M:TriadCore.StructExprStack.PopGraph">
+            <summary>
+            ������� ���� � ������� �����
+            </summary>
+        </member>
+        <member name="P:TriadCore.StructExprStack.FirstInStackGraph">
+            <summary>
+            ���� �� �������
+            </summary>
+        </member>
+        <member name="P:TriadCore.StructExprStack.SecondInStackGraph">
+            <summary>
+            ����, ������ �� ����� �� �������
+            </summary>
+        </member>
+        <member name="T:TriadCore.GraphBuilder">
+            <summary>
+            ���������� ����� ��� �������� ���������
+            </summary>
+        </member>
+        <member name="M:TriadCore.GraphBuilder.PrintMessage(System.Object)">
+            <summary>
+            ���������� ������
+            </summary>
+            <param name="message">���������</param>
+        </member>
+        <member name="M:TriadCore.GraphBuilder.Build">
+            <summary>
+            ��������� ���������
+            </summary>
+            <returns>����, �������������� ��� ���������</returns>
+        </member>
+        <member name="T:TriadCore.TestFailedException">
+            <summary>
+            ������� ������ � ���� ������������
+            </summary>
+        </member>
+        <member name="M:TriadCore.TestFailedException.#ctor">
+            <summary>
+            �����������
+            </summary>
+        </member>
+        <member name="M:TriadCore.TestFailedException.#ctor(System.String)">
+            <summary>
+            �����������
+            </summary>
+            <param name="message">���������</param>
+        </member>
+        <member name="M:TriadCore.TestFailedException.#ctor(System.String,System.Exception)">
+            <summary>
+            �����������
+            </summary>
+            <param name="message">���������</param>
+            <param name="innerException">��������� ����������</param>
+        </member>
+        <member name="M:TriadCore.TestFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            �����������
+            </summary>
+            <param name="si"></param>
+            <param name="sc"></param>
+        </member>
+        <member name="T:TriadCore.TestCommon">
+            <summary>
+            ����������� ����� ��� ������������
+            </summary>
+        </member>
+        <member name="E:TriadCore.TestCommon.OnTest">
+            <summary>
+            ������� ������ ������������
+            </summary>
+        </member>
+        <member name="M:TriadCore.TestCommon.DoTest">
+            <summary>
+            ������ ��������������
+            </summary>
+        </member>
+    </members>
+</doc>

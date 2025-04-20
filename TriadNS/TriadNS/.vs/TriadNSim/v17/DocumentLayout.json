@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B458B23-AED1-4241-9D73-B963B29A813B}|TriadNSim\\TriadNSim.csproj|c:\\users\\andrey\\documents\\prog\\triadns\\triadns\\triadnsim\\nsdesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B458B23-AED1-4241-9D73-B963B29A813B}|TriadNSim\\TriadNSim.csproj|solutionrelative:triadnsim\\nsdesign.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|c:\\users\\andrey\\documents\\prog\\triadns\\triadns\\triadcompiler\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|solutionrelative:triadcompiler\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\triadcompiler\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|solutionrelative:triadcompiler\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\triadcompiler\\\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0442\u0438\u043F\u043E\u0432\\\u0442\u0438\u043F\u044B\\commontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|solutionrelative:triadcompiler\\\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0442\u0438\u043F\u043E\u0432\\\u0442\u0438\u043F\u044B\\commontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{776D87DE-3ABA-4534-B739-BFC0E82704F3}|TriadRunner\\TriadRunner.csproj|C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\triadrunner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{776D87DE-3ABA-4534-B739-BFC0E82704F3}|TriadRunner\\TriadRunner.csproj|solutionrelative:triadrunner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B458B23-AED1-4241-9D73-B963B29A813B}|TriadNSim\\TriadNSim.csproj|C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\triadnsim\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1B458B23-AED1-4241-9D73-B963B29A813B}|TriadNSim\\TriadNSim.csproj|solutionrelative:triadnsim\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\triadcompiler\\\u0440\u0430\u0437\u0431\u043E\u0440 \u043A\u043E\u0434\u0430\\\u0443\u0441\u043B\u043E\u0432\u0438\u044F \u043C\u043E\u0434\u0435\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\simconditionparser_stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37AB8C52-17C6-4330-A2D3-8FD32988A684}|TriadCompiler\\TriadCompiler.csproj|solutionrelative:triadcompiler\\\u0440\u0430\u0437\u0431\u043E\u0440 \u043A\u043E\u0434\u0430\\\u0443\u0441\u043B\u043E\u0432\u0438\u044F \u043C\u043E\u0434\u0435\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\simconditionparser_stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FDBD413-AC61-454E-B066-77D1F01BECC9}|TriadCore\\TriadCore.csproj|C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\triadcore\\\u0440\u0443\u0442\u0438\u043D\u044B\\routine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FDBD413-AC61-454E-B066-77D1F01BECC9}|TriadCore\\TriadCore.csproj|solutionrelative:triadcore\\\u0440\u0443\u0442\u0438\u043D\u044B\\routine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NSDesign.cs",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadNSim\\NSDesign.cs",
+              "RelativeDocumentMoniker": "TriadNSim\\NSDesign.cs",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadNSim\\NSDesign.cs",
+              "RelativeToolTip": "TriadNSim\\NSDesign.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAwwDkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:39:27.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\Main.cs",
+              "RelativeDocumentMoniker": "TriadCompiler\\Main.cs",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\Main.cs",
+              "RelativeToolTip": "TriadCompiler\\Main.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:34:36.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.config",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\app.config",
+              "RelativeDocumentMoniker": "TriadCompiler\\app.config",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\app.config",
+              "RelativeToolTip": "TriadCompiler\\app.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-17T12:34:35.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CommonType.cs",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0442\u0438\u043F\u043E\u0432\\\u0422\u0438\u043F\u044B\\CommonType.cs",
+              "RelativeDocumentMoniker": "TriadCompiler\\\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0442\u0438\u043F\u043E\u0432\\\u0422\u0438\u043F\u044B\\CommonType.cs",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0442\u0438\u043F\u043E\u0432\\\u0422\u0438\u043F\u044B\\CommonType.cs",
+              "RelativeToolTip": "TriadCompiler\\\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0442\u0438\u043F\u043E\u0432\\\u0422\u0438\u043F\u044B\\CommonType.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAuwB0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:41:04.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.config",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadNSim\\app.config",
+              "RelativeDocumentMoniker": "TriadNSim\\app.config",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadNSim\\app.config",
+              "RelativeToolTip": "TriadNSim\\app.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-16T16:39:23.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SimConditionParser_Stat.cs",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\\u0420\u0430\u0437\u0431\u043E\u0440 \u043A\u043E\u0434\u0430\\\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u043C\u043E\u0434\u0435\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SimConditionParser_Stat.cs",
+              "RelativeDocumentMoniker": "TriadCompiler\\\u0420\u0430\u0437\u0431\u043E\u0440 \u043A\u043E\u0434\u0430\\\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u043C\u043E\u0434\u0435\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SimConditionParser_Stat.cs",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCompiler\\\u0420\u0430\u0437\u0431\u043E\u0440 \u043A\u043E\u0434\u0430\\\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u043C\u043E\u0434\u0435\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SimConditionParser_Stat.cs",
+              "RelativeToolTip": "TriadCompiler\\\u0420\u0430\u0437\u0431\u043E\u0440 \u043A\u043E\u0434\u0430\\\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u043C\u043E\u0434\u0435\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SimConditionParser_Stat.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAuwDMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:34:26.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadRunner\\Program.cs",
+              "RelativeDocumentMoniker": "TriadRunner\\Program.cs",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadRunner\\Program.cs",
+              "RelativeToolTip": "TriadRunner\\Program.cs",
+              "ViewState": "AQIAAAoBAAAAAAAAAAAAABEBAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:33:44.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Routine.cs",
+              "DocumentMoniker": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCore\\\u0420\u0443\u0442\u0438\u043D\u044B\\Routine.cs",
+              "RelativeDocumentMoniker": "TriadCore\\\u0420\u0443\u0442\u0438\u043D\u044B\\Routine.cs",
+              "ToolTip": "C:\\Users\\andrey\\Documents\\prog\\TriadNS\\TriadNS\\TriadCore\\\u0420\u0443\u0442\u0438\u043D\u044B\\Routine.cs",
+              "RelativeToolTip": "TriadCore\\\u0420\u0443\u0442\u0438\u043D\u044B\\Routine.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAuwCwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:33:09.832Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
