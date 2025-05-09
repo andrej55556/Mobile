@@ -1,38 +1,58 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
-import { Alert, StyleSheet, View } from 'react-native';
-import { useRouter } from 'expo-router';
+import { ActivityIndicator, Alert, StyleSheet, View } from 'react-native';
+import { useFocusEffect,useRouter } from 'expo-router';
 import { MarkerData } from '../types';
 import Map from '../components/Map';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useDatabase } from '../contexts/DatabaseContext';
 
 export default function IndexScreen() {
   const [markers, setMarkers] = useState<MarkerData[]>([]);
-  const [currentId, setCurrentId] = useState<number>(0);
+  const db = useDatabase();
   const router = useRouter();
 
-  useEffect(() => {
-    const clearStorageOnStart = async () => {
-      await AsyncStorage.clear();
-    };
+  useFocusEffect(
+    React.useCallback(() => {
+      if (!db.isLoading) {
+        loadMarkers();
+      }
+    }, [db.isLoading])
+  );
 
-    clearStorageOnStart();
-  }, []);
+  const loadMarkers = async () => {
+    try {
+      const result = await db.getMarkers();
+      setMarkers(result);
+    } catch (error) {
+      console.error('Ошибка при загрузке маркеров:', error);
+      Alert.alert('Ошибка', 'Не удалось загрузить маркеры');
+    }
+  };
 
-  const handleLongPress = (event: any) => {
+  const handleLongPress = async (event: any) => {
     try {
       const { coordinate } = event.nativeEvent;
+      const markerId = await db.addMarker(coordinate.latitude, coordinate.longitude);
+
       const newMarker: MarkerData = {
-        id: currentId,
+        id: markerId,
         coordinate,
         images: [],
       };
+
       setMarkers([...markers, newMarker]);
-      setCurrentId((prevId) => prevId + 1);
     } catch (error) {
       Alert.alert('Ошибка', 'Не удалось добавить метку. Попробуйте снова.');
     }
   };
+
+  if (db.isLoading) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>

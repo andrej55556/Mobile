@@ -1,39 +1,32 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { View, Button, StyleSheet, Alert, Modal, Image } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Button, StyleSheet, Alert, Modal, Image, ActivityIndicator } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { ImageData } from '../../types';
 import * as ImagePicker from 'expo-image-picker';
 import ImageList from '../../components/ImageList';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-const STORAGE_KEY = 'marker_images';
+import { useDatabase } from '../../contexts/DatabaseContext';
 
 export default function MarkerDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const [images, setImages] = useState<{ [key: string]: ImageData[] }>({});
   const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
+  const [images, setImages] = useState<ImageData[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const { addImage, deleteImage, getMarkerImages, deleteMarker } = useDatabase();
 
   useEffect(() => {
-    const loadImages = async () => {
-      try {
-        const storedImages = await AsyncStorage.getItem(STORAGE_KEY);
-        if (storedImages) {
-          setImages(JSON.parse(storedImages));
-        }
-      } catch (error) {
-        Alert.alert('Ошибка', 'Не удалось загрузить изображения.');
-      }
-    };
-
     loadImages();
-  }, []);
+  }, [id]);
 
-  const saveImages = async (images: { [key: string]: ImageData[] }) => {
+  const loadImages = async () => {
     try {
-      await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(images));
+      const markerImages = await getMarkerImages(Number(id));
+      setImages(markerImages);
     } catch (error) {
-      console.error('Не удалось сохранить изображение:', error);
+      Alert.alert('Ошибка', 'Не удалось загрузить изображения');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -46,58 +39,82 @@ export default function MarkerDetailScreen() {
       });
 
       if (!result.canceled) {
-        const newImage: ImageData = {
-          id: Date.now().toString(),
-          uri: result.assets[0].uri,
-        };
-        const updatedImages = { ...images, [id]: [...(images[id] || []), newImage] };
-        setImages(updatedImages);
-        saveImages(updatedImages);
+        await addImage(Number(id), result.assets[0].uri);
+        await loadImages();
       }
     } catch (error) {
-      Alert.alert('Ошибка', 'Не удалось выбрать изображение.');
+      Alert.alert('Ошибка', 'Не удалось добавить изображение');
     }
   };
 
-  // const deleteImage = (imageId: string) => {
-  //   setImages((prevImages) => ({
-  //     ...prevImages,
-  //     [id]: prevImages[id].filter((image) => image.id !== imageId),
-  //   }));
-  //   setSelectedImage(null);
-  // };
-  const deleteImage = useCallback(
-    (imageId: string) => {
-      setImages((prevImages) => {
-        const updatedImagesForMarker = prevImages[id].filter((image) => image.id !== imageId);
-  
-        // Если массив пустой, удаляем ключ метки
-        const updatedImages = updatedImagesForMarker.length > 0
-          ? { ...prevImages, [id]: updatedImagesForMarker }
-          : Object.fromEntries(Object.entries(prevImages).filter(([key]) => key !== id));
-  
-        saveImages(updatedImages); // Сохраняем обновлённое состояние
-        return updatedImages;
-      });
+  const handleDeleteImage = async (imageId: string) => {
+    try {
+      await deleteImage(Number(imageId));
+      await loadImages();
       setSelectedImage(null);
-    },
-    [id, saveImages]
-  );
+    } catch (error) {
+      Alert.alert('Ошибка', 'Не удалось удалить изображение');
+    }
+  };
+
+  const handleDeleteMarker = async (markerId: string) => {
+    Alert.alert(
+      'Удаление маркера',
+      'Удалить этот маркер?',
+      [
+        {
+          text: 'Отмена',
+          style: 'cancel'
+        },
+        {
+          text: 'Удалить',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await deleteMarker(Number(markerId));
+              router.back();
+            } catch (error) {
+              Alert.alert('Ошибка', 'Не удалось удалить маркер');
+            }
+          }
+        }
+      ]
+    );
+  };
+
+  if (isLoading) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
-      <ImageList images={images[id] || []} onDelete={(imageId) => setSelectedImage(images[id].find(img => img.id === imageId) || null)} />
+      <ImageList 
+        images={images} 
+        onDelete={(imageId) => setSelectedImage(images.find(img => img.id === imageId) || null)} 
+      />
       <Button title="Добавить изображение" onPress={pickImage} />
       <Button title="Назад к карте" onPress={() => router.back()} />
+      <Button 
+                title="Удалить маркер" 
+                onPress={() => handleDeleteMarker(id)} 
+                color="red" 
+              />
+      
       <Modal visible={!!selectedImage} transparent={true} animationType="fade">
         <View style={styles.modalContainer}>
           {selectedImage && (
             <>
               <Image source={{ uri: selectedImage.uri }} style={styles.fullImage} />
-              <Button title="Удалить изображение" onPress={() => deleteImage(selectedImage.id)} color="red" />
-              <View>
-                <Button title="Закрыть" onPress={() => setSelectedImage(null)} />
-              </View>
+              <Button 
+                title="Удалить изображение" 
+                onPress={() => handleDeleteImage(selectedImage.id)} 
+                color="red" 
+              />
+              <Button title="Закрыть" onPress={() => setSelectedImage(null)} />
             </>
           )}
         </View>

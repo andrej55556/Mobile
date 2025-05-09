@@ -1428,6 +1428,28 @@
     
 
 
+    <!-- http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#MaxCoord -->
+
+    <owl:NamedIndividual rdf:about="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#MaxCoord">
+        <rdf:type rdf:resource="http://www.psu.ru/ontologies/2009/4/TriadNetCommon.owl#RoutineParameter"/>
+        <TriadNetCommon:hasName>MaxCoord</TriadNetCommon:hasName>
+        <TriadNetCommon:hasParameterDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</TriadNetCommon:hasParameterDefaultValue>
+        <TriadNetCommon:hasParameterType>Real</TriadNetCommon:hasParameterType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#MinCoord -->
+
+    <owl:NamedIndividual rdf:about="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#MinCoord">
+        <rdf:type rdf:resource="http://www.psu.ru/ontologies/2009/4/TriadNetCommon.owl#RoutineParameter"/>
+        <TriadNetCommon:hasName>MinCoord</TriadNetCommon:hasName>
+        <TriadNetCommon:hasParameterDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</TriadNetCommon:hasParameterDefaultValue>
+        <TriadNetCommon:hasParameterType>Real</TriadNetCommon:hasParameterType>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#OtherNodes1 -->
 
     <owl:NamedIndividual rdf:about="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#OtherNodes1">
@@ -1521,6 +1543,8 @@
     <owl:NamedIndividual rdf:about="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#RDSO">
         <rdf:type rdf:resource="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#DSO"/>
         <TriadNetCommon:hasRoutineParameter rdf:resource="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#Id"/>
+        <TriadNetCommon:hasRoutineParameter rdf:resource="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#MaxCoord"/>
+        <TriadNetCommon:hasRoutineParameter rdf:resource="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#MinCoord"/>
         <TriadNetCommon:hasRoutinePole rdf:resource="http://www.psu.ru/ontologies/2009/4/ComputerNetwork.owl#Con10"/>
         <TriadNetCommon:assemblyPath rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">DSO.dll</TriadNetCommon:assemblyPath>
         <TriadNetCommon:hasName>DSO</TriadNetCommon:hasName>

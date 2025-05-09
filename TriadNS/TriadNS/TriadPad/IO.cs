@@ -8,17 +8,17 @@ namespace TriadPad
     {
 
     /// <summary>
-    /// Класс для ввода кода из RichEdit
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ RichEdit
     /// </summary>
     public class InputRichEdit : Input
         {
         /// <summary>
-        /// 	<para> Конструктор класса <see cref="InputRichEdit"/> .</para>
+        /// 	<para> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ <see cref="InputRichEdit"/> .</para>
         /// </summary>
-        /// <param Name="textBox"> Контрол откуда идет чтение
+        /// <param Name="textBox"> пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </param>
         /// <exception cref="ArgumentNullException">
-        /// 	<para>Значение аргумента <paramref Name="textBox"/> равно <langword Name="null"/>.</para>
+        /// 	<para>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <paramref Name="textBox"/> пїЅпїЅпїЅпїЅпїЅ <langword Name="null"/>.</para>
         /// </exception>
         public InputRichEdit( RichTextBox textBox )
             {
@@ -30,9 +30,9 @@ namespace TriadPad
 
 
         /// <summary>
-        /// Построчное чтение
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
-        /// <returns>Прочитанный символ (null, если читать нечего)</returns>
+        /// <returns>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (null, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)</returns>
         public override string GetLine()
             {
             if ( nextLineNumber < textBox.Lines.Length )
@@ -47,28 +47,28 @@ namespace TriadPad
 
 
         /// <summary>
-        /// Читаемый контрол
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         private RichTextBox textBox;
 
         /// <summary>
-        /// Номер строки для следующего чтения
+        /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         private uint nextLineNumber = 0;
         }
 
     /// <summary>
-    /// Класс для вывода кода в RichEdit
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ RichEdit
     /// </summary>
     public class OutputRichEdit : Output
         {
         /// <summary>
-        /// 	<para> Конструктор класса <see cref="OutputRichEdit"/> .</para>
+        /// 	<para> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ <see cref="OutputRichEdit"/> .</para>
         /// </summary>
         /// <param Name="textBox">
         /// </param>
         /// <exception cref="ArgumentNullException">
-        /// 	<para>Значение аргумента <paramref Name="textBox"/> равно <langword Name="null"/>.</para>
+        /// 	<para>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <paramref Name="textBox"/> пїЅпїЅпїЅпїЅпїЅ <langword Name="null"/>.</para>
         /// </exception>
         public OutputRichEdit( RichTextBox textBox )
             {
@@ -80,11 +80,11 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Вывести строчку без перевода строки
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
-        /// <param Name="line">Выводимая строка</param>
+        /// <param Name="line">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</param>
         /// <exception cref="ArgumentNullException">
-        /// 	<para>Значение аргумента <paramref Name="line"/> равно <langword Name="null"/>.</para>
+        /// 	<para>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <paramref Name="line"/> пїЅпїЅпїЅпїЅпїЅ <langword Name="null"/>.</para>
         /// </exception>
         public override void Print( string line )
             {
@@ -95,11 +95,11 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Вывести строчку
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
-        /// <param Name="line">Выводимая строка</param>
+        /// <param Name="line">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</param>
         /// <exception cref="ArgumentNullException">
-        /// 	<para>Значение аргумента <paramref Name="line"/> равно <langword Name="null"/>.</para>
+        /// 	<para>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <paramref Name="line"/> пїЅпїЅпїЅпїЅпїЅ <langword Name="null"/>.</para>
         /// </exception>
         public override void PrintLine( string line )
             {
@@ -113,23 +113,23 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Контрол для записи
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         private RichTextBox textBox;
         }
 
 
     /// <summary>
-    /// Описание возникшей ошибки
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     public class ErrorDescription
         {
         /// <summary>
-        /// Конструктор класса
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
-        /// <param name="message">Текст сообщения</param>
-        /// <param name="lineNumber">Номер строки с ошибкой</param>
-        /// <param name="chNumber">Номер символа, где возникла ошибка</param>
+        /// <param name="message">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</param>
+        /// <param name="lineNumber">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</param>
+        /// <param name="chNumber">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</param>
         public ErrorDescription( string message, int lineNumber, int chNumber )
             {
             if ( message == null )
@@ -141,20 +141,20 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Текст сообщения
+        /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         private string message;
         /// <summary>
-        /// Номер строки с ошибкой
+        /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         private int _lineNumber;
         /// <summary>
-        /// Номер символа, где возникла ошибка
+        /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         private int _chNumber;
 
         /// <summary>
-        /// Номер строки с ошибкой
+        /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         public int lineNumber
             {
@@ -165,7 +165,7 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Номер символа, где возникла ошибка
+        /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         public int chNumber
             {
@@ -177,7 +177,7 @@ namespace TriadPad
 
 
         /// <summary>
-        /// Строковое предсатвление
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -188,16 +188,16 @@ namespace TriadPad
 
 
     /// <summary>
-    /// Класс для составления списка ошибок и мест их возникновения
+    /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     public class IOErrorListener : IOListing
         {
         /// <summary>
-        /// 	<para> Конструктор класса <see cref="IOErrorListener"/> .</para>
+        /// 	<para> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ <see cref="IOErrorListener"/> .</para>
         /// </summary>
-        /// <param Name="input"> Источник кода
+        /// <param Name="input"> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         /// </param>
-        /// <param Name="output"> Приемник листинга
+        /// <param Name="output"> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         /// </param>
         public IOErrorListener( Input input, Output output )
             : base( input, output )
@@ -205,11 +205,11 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Показ ошибки
+        /// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
-        /// <param Name="message">Текст сообщения</param>
+        /// <param Name="message">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</param>
         /// <exception cref="ArgumentNullException">
-        /// 	<para>Значение аргумента <paramref Name="message"/> равно <langword Name="null"/>.</para>
+        /// 	<para>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <paramref Name="message"/> пїЅпїЅпїЅпїЅпїЅ <langword Name="null"/>.</para>
         /// </exception>
         public override void ShowError( string message )
             {
@@ -222,9 +222,9 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Получить зарегистрированные ошибки
+        /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
-        /// <returns>Список описаний ошибок</returns>
+        /// <returns>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</returns>
         public ErrorDescription[] getRegisteredErrors()
             {
             ErrorDescription[] resultList = new ErrorDescription[ registeredErrors.Count ];
@@ -233,7 +233,7 @@ namespace TriadPad
             }
 
         /// <summary>
-        /// Список зарегистрированных ошибок
+        /// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         /// </summary>
         private List<ErrorDescription> registeredErrors = new List<ErrorDescription>();
         }
